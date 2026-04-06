@@ -1,0 +1,3 @@
+mnist- https://drive.google.com/file/d/1eEKzfmEu6WKdRlohBQiqi3PhW_uIVJVP/view
+iris- https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv
+har- https://raw.githubusercontent.com/anmolkr186/Human-Activity-Recognition/refs/heads/main/HAR%20dataset.csv
