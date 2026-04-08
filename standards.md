@@ -1,44 +1,47 @@
-# Project Standards
-## Scope
-This file defines the common benchmark standard for the three project workloads so CPU, CUDA, and FPGA results are directly comparable.
+# ML FPGA Project Standards
 
-Workloads covered:
+## Scope
+Common benchmark rules for CPU, CUDA, and FPGA implementations.
+
+Workloads:
 1. `iris_perceptron`
 2. `mnist_cnn`
 3. `har_svm`
 
 ## Common rules
-- Model behavior must match across devices. Hardware-specific optimizations are allowed, but not changes to dataset split, preprocessing, label mapping, prediction rule, loss, or update rule.
-- Report all times in **ms**, throughput in **samples_per_sec**, memory in **bytes**, and quality metrics as fractions in **[0,1]**.
-- Timings must **exclude** source compilation, FPGA synthesis/bitstream generation, CSV parsing/loading, and CSV writing.
-- Use the same stage names in all implementations:
+- Same dataset split, preprocessing, label mapping, model behavior, and metric definitions across all devices.
+- Report time in **ms**, throughput in **samples_per_sec**, memory in **bytes**, and quality metrics in **[0,1]**.
+- Exclude compile time, synthesis/bitstream generation, file I/O, and CSV writing from benchmark timing.
+- Use the same timing stage names everywhere:
   - `input_staging_ms`
   - `forward_ms`
   - `loss_metric_ms`
   - `backward_ms`
   - `update_ms`
-- Percentiles must use the same definition everywhere: sort values and use linear interpolation. Required percentiles: **p50** and **p95**.
-- Every run must report: `run_id`, timestamp, workload, implementation name, device class (`cpu`/`cuda`/`fpga`), device name, train file, test file, seed, hyperparameters, parameter count, train sample count, and test sample count.
+- Required percentiles: **p50** and **p95**.
+- Every run must include: `run_id`, timestamp, workload, implementation, device class, device name, train file, test file, seed, hyperparameters, parameter count, train sample count, and test sample count.
 
 ## Workload 1: Iris binary perceptron
 **Dataset**
-- File: `iris.csv`
-- Use only two classes:
-  - negative class `-1` = `setosa`
-  - positive class `+1` = `versicolor`
-- Drop `virginica` rows.
-- Split: stratified **80/20**, seed **42**.
-- Standardize features using **training-split mean/std only**.
+- Files: `iris_train.csv`, `iris_test.csv`
+- `virginica` is already removed.
+- Binary classes only:
+  - `setosa -> -1`
+  - `versicolor -> +1`
+- No extra class filtering or train/test split step inside the implementation.
+- Use all feature columns except label.
+- Standardize features using **training-set mean/std only**.
 - If stddev `< 1e-6`, replace with `1.0`.
 
 **Model**
 - Binary perceptron
 - Input dimension: **4**
-- Output: sign of `w.x + b`
-- Parameters: **4 weights + 1 bias = 5 total**
-- Initialization: all zeros
+- Score: `w.x + b`
+- Prediction: sign of score
+- Parameters: **4 weights + 1 bias = 5**
+- Initialize weights and bias to zero
 
-**Training standard**
+**Training**
 - Epochs: **30**
 - Batch size: **16**
 - Learning rate: **0.10**
@@ -46,16 +49,16 @@ Workloads covered:
 - Update rule: average perceptron update over misclassified samples only
 - Reporting loss: mean perceptron loss `max(0, -y * score)`
 
-**Required quality metrics**
+**Required metrics**
 - loss, accuracy, precision, recall, F1
 - TP, TN, FP, FN
 
 ## Workload 2: MNIST tiny CNN
 **Dataset**
 - Files: `mnist_train.csv`, `mnist_test.csv`
-- First column = label in `[0..9]`
-- Remaining **784** columns = flattened `28 x 28` grayscale image
-- Normalize pixels by dividing by `255.0`
+- First column is label `[0..9]`
+- Remaining **784** columns are flattened `28 x 28` grayscale pixels
+- Normalize pixel values by `255.0`
 - No augmentation
 
 **Model**
@@ -69,7 +72,7 @@ Workloads covered:
 8. `FullyConnected(400 -> 10)`
 9. `Softmax + cross-entropy`
 
-**Reference tensor shapes**
+**Reference shapes**
 - input: `1 x 28 x 28`
 - conv1: `8 x 26 x 26`
 - pool1: `8 x 13 x 13`
@@ -78,18 +81,15 @@ Workloads covered:
 - flatten: `400`
 - logits: `10`
 
-**Parameter count**
-- Total trainable parameters: **5258**
-
-**Training standard**
+**Training**
+- Parameter count: **5258**
 - Epochs: **3**
 - Batch size: **64**
 - Learning rate: **0.02**
-- Initialization seed: **42**
-- Weight initialization: He init
-- Bias initialization: zero
+- Init seed: **42**
+- He init for weights, zero init for biases
 
-**Required quality metrics**
+**Required metrics**
 - loss, accuracy
 - macro precision, macro recall, macro F1
 - confusion matrix
@@ -97,40 +97,40 @@ Workloads covered:
 ## Workload 3: HAR multiclass linear SVM
 **Dataset**
 - Files: `har_train.csv`, `har_test.csv`
-- Label column: `class` (if not present, use the explicit label column agreed by the team and keep it identical across implementations)
-- All non-label columns are features
-- Train and test must use the same schema and delimiter
-- Non-numeric feature columns must be encoded using a mapping fit on the **training set only**
-- All features must then be standardized using **training-set mean/std only**
+- Label column: `class`
+- All other columns are features
+- Train and test must use the same schema
+- Encode non-numeric feature columns using mappings fit on the **training set only**
+- Standardize features using **training-set mean/std only**
 - If stddev `< 1e-6`, replace with `1.0`
 
 **Model**
 - Multiclass **linear one-vs-rest SVM**
-- Input dimension: **D = number of feature columns**
-- Output classes: **C = number of labels in the training set**
+- Input dimension: number of feature columns
+- Output classes: labels present in training set
 - Parameters: `C * D` weights + `C` biases
-- Score: `score_c = w_c.x + b_c`
-- Prediction: `argmax_c(score_c)`
-- Weight init: random normal mean `0`, std `0.01`, seed `42`
+- Score per class: `w_c.x + b_c`
+- Prediction: `argmax(score_c)`
+- Weight init: normal `(0, 0.01)`, seed `42`
 - Bias init: zero
 
-**Training standard**
+**Training**
 - Epochs: **25**
 - Batch size: **128**
 - Learning rate: **0.01**
-- Regularization: `reg_lambda = 1e-4`
+- `reg_lambda = 1e-4`
 - Shuffle seed: **42**
 - Loss: one-vs-rest hinge loss with L2 regularization
 
-**Required quality metrics**
+**Required metrics**
 - hinge loss, accuracy
 - macro precision, macro recall, macro F1
 - confusion matrix
 
 ## Required reporting files
-Use these CSV files for every run.
+Use the same CSV schemas for every implementation.
 
-### 1. `run_summary.csv` (one row per run)
+### `run_summary.csv` (one row per run)
 Required columns:
 - `run_id`
 - `timestamp_utc`
@@ -187,11 +187,11 @@ Required columns:
 - `fn`
 
 Rules:
-- Use `NA` for metrics that do not apply to a workload.
-- For Iris, `final_test_precision/recall/f1` are the binary metrics.
-- For MNIST and HAR, use the `final_test_macro_*` fields.
+- Use `NA` for metrics not applicable to a workload.
+- Iris uses `final_test_precision`, `final_test_recall`, `final_test_f1`.
+- MNIST and HAR use `final_test_macro_precision`, `final_test_macro_recall`, `final_test_macro_f1`.
 
-### 2. `epoch_metrics.csv` (one row per epoch)
+### `epoch_metrics.csv` (one row per epoch)
 Required columns:
 - `run_id`
 - `epoch`
@@ -208,7 +208,7 @@ Required columns:
 - `epoch_time_ms`
 - `epoch_throughput_samples_per_sec`
 
-### 3. `latency_trace.csv` (one row per measured latency)
+### `latency_trace.csv` (one row per latency sample)
 Required columns:
 - `run_id`
 - `workload_id`
@@ -217,20 +217,3 @@ Required columns:
 - `batch_index`
 - `sample_count`
 - `latency_ms`
-
-### 4. `confusion_matrix.csv` (required for MNIST and HAR, optional for Iris)
-Required columns:
-- `run_id`
-- `workload_id`
-- `true_class`
-- `pred_class`
-- `count`
-
-## Final comparison rule
-Cross-device comparisons must be done only when all three implementations use the same:
-- dataset files
-- split and preprocessing rules
-- model definition
-- hyperparameters
-- metric definitions
-- timing boundaries
