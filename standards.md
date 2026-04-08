@@ -1,5 +1,4 @@
-# ML FPGA Project Standards
-
+# Project Standards
 ## Scope
 Common benchmark rules for CPU, CUDA, and FPGA implementations.
 
