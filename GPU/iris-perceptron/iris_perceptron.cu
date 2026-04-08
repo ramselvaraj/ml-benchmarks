@@ -14,7 +14,6 @@
 #include <random>
 #include <sstream>
 #include <string>
-#include <unordered_map>
 #include <vector>
 
 #define CHECK_CUDA(call)                                                       \
@@ -38,7 +37,6 @@ struct Dataset {
 struct BinaryClassInfo {
     std::string negative_label;
     std::string positive_label;
-    int discarded_other_classes = 0;
 };
 
 struct StandardizationStats {
@@ -120,14 +118,6 @@ static inline std::string trim(const std::string& s) {
     return s.substr(lo, hi - lo);
 }
 
-static bool is_numeric_token(const std::string& token) {
-    std::string t = trim(token);
-    if (t.empty()) return false;
-    char* end = nullptr;
-    std::strtof(t.c_str(), &end);
-    return end != t.c_str() && *end == '\0';
-}
-
 static std::vector<std::string> split_csv_simple(const std::string& line) {
     std::vector<std::string> out;
     std::stringstream ss(line);
@@ -136,6 +126,22 @@ static std::vector<std::string> split_csv_simple(const std::string& line) {
         out.push_back(trim(token));
     }
     return out;
+}
+
+static bool parse_float_token(const std::string& token, float& value) {
+    std::string t = trim(token);
+    if (t.empty()) return false;
+    char* end = nullptr;
+    value = std::strtof(t.c_str(), &end);
+    return end != t.c_str() && *end == '\0';
+}
+
+static bool is_binary_indicator_value(float v) {
+    return std::fabs(v) < 1e-6f || std::fabs(v - 1.0f) < 1e-6f;
+}
+
+static bool label_info_ready(const BinaryClassInfo& info) {
+    return !info.negative_label.empty() && !info.positive_label.empty();
 }
 
 float percentile(std::vector<float> values, double q) {
@@ -148,7 +154,135 @@ float percentile(std::vector<float> values, double q) {
     return static_cast<float>((1.0 - w) * values[lo] + w * values[hi]);
 }
 
-Dataset load_iris_binary_csv(const std::string& path, BinaryClassInfo& info) {
+static int encode_scalar_label(const std::string& token, BinaryClassInfo& info) {
+    float v = 0.0f;
+    if (!parse_float_token(token, v)) {
+        return 2;
+    }
+
+    if (std::fabs(v + 1.0f) < 1e-6f) {
+        if (info.negative_label.empty()) info.negative_label = "-1";
+        if (info.positive_label.empty()) info.positive_label = "+1";
+        return -1;
+    }
+    if (std::fabs(v) < 1e-6f) {
+        if (info.negative_label.empty()) info.negative_label = "0";
+        if (info.positive_label.empty()) info.positive_label = "1";
+        return -1;
+    }
+    if (std::fabs(v - 1.0f) < 1e-6f) {
+        if (info.negative_label.empty()) info.negative_label = "0";
+        if (info.positive_label.empty()) info.positive_label = "1";
+        return +1;
+    }
+    return 2;
+}
+
+static int encode_text_label(const std::string& token, BinaryClassInfo& info, bool allow_discovery) {
+    std::string label = trim(token);
+    if (label.empty()) return 2;
+
+    if (!info.negative_label.empty() && label == info.negative_label) return -1;
+    if (!info.positive_label.empty() && label == info.positive_label) return +1;
+
+    if (!allow_discovery) return 2;
+
+    if (info.negative_label.empty()) {
+        info.negative_label = label;
+        return -1;
+    }
+    if (info.positive_label.empty()) {
+        info.positive_label = label;
+        return +1;
+    }
+    return 2;
+}
+
+static bool parse_one_hot_tail_row(
+    const std::vector<std::string>& tokens,
+    const std::vector<std::string>& header,
+    float features[NUM_FEATURES],
+    int& y,
+    BinaryClassInfo& info,
+    bool allow_discovery
+) {
+    if (tokens.size() < 6) return false;
+
+    float a = 0.0f, b = 0.0f;
+    if (!parse_float_token(tokens[tokens.size() - 2], a) ||
+        !parse_float_token(tokens[tokens.size() - 1], b)) {
+        return false;
+    }
+    if (!is_binary_indicator_value(a) || !is_binary_indicator_value(b)) return false;
+
+    int ia = static_cast<int>(std::lround(a));
+    int ib = static_cast<int>(std::lround(b));
+    if (!((ia == 1 && ib == 0) || (ia == 0 && ib == 1))) return false;
+
+    std::vector<float> numeric_before_tail;
+    numeric_before_tail.reserve(tokens.size());
+    for (size_t i = 0; i + 2 < tokens.size(); ++i) {
+        float v = 0.0f;
+        if (parse_float_token(tokens[i], v)) {
+            numeric_before_tail.push_back(v);
+        }
+    }
+    if (numeric_before_tail.size() < NUM_FEATURES) return false;
+
+    size_t start = numeric_before_tail.size() - NUM_FEATURES;
+    for (int j = 0; j < NUM_FEATURES; ++j) {
+        features[j] = numeric_before_tail[start + j];
+    }
+
+    if (!label_info_ready(info)) {
+        if (!allow_discovery) return false;
+        if (header.size() >= 2) {
+            info.negative_label = trim(header[header.size() - 2]);
+            info.positive_label = trim(header[header.size() - 1]);
+        }
+        if (info.negative_label.empty()) info.negative_label = "class0";
+        if (info.positive_label.empty()) info.positive_label = "class1";
+    }
+
+    y = (ia == 1 && ib == 0) ? -1 : +1;
+    return true;
+}
+
+static bool parse_scalar_label_row(
+    const std::vector<std::string>& tokens,
+    float features[NUM_FEATURES],
+    int& y,
+    BinaryClassInfo& info,
+    bool allow_discovery
+) {
+    if (tokens.size() < 5) return false;
+
+    std::vector<float> numeric_before_label;
+    numeric_before_label.reserve(tokens.size());
+    for (size_t i = 0; i + 1 < tokens.size(); ++i) {
+        float v = 0.0f;
+        if (parse_float_token(tokens[i], v)) {
+            numeric_before_label.push_back(v);
+        }
+    }
+    if (numeric_before_label.size() < NUM_FEATURES) return false;
+
+    size_t start = numeric_before_label.size() - NUM_FEATURES;
+    for (int j = 0; j < NUM_FEATURES; ++j) {
+        features[j] = numeric_before_label[start + j];
+    }
+
+    int encoded = encode_scalar_label(tokens.back(), info);
+    if (encoded == 2) {
+        encoded = encode_text_label(tokens.back(), info, allow_discovery);
+    }
+    if (encoded == 2) return false;
+
+    y = encoded;
+    return true;
+}
+
+Dataset load_binary_iris_csv(const std::string& path, BinaryClassInfo& info, bool allow_discovery) {
     std::ifstream fin(path);
     if (!fin) {
         std::cerr << "Failed to open: " << path << std::endl;
@@ -156,54 +290,44 @@ Dataset load_iris_binary_csv(const std::string& path, BinaryClassInfo& info) {
     }
 
     Dataset ds;
-    std::vector<std::string> class_order;
     std::string line;
-    int total_rows = 0;
+    std::vector<std::string> header;
+    bool header_checked = false;
+    int raw_rows = 0;
     int kept_rows = 0;
 
     while (std::getline(fin, line)) {
-        if (line.empty()) continue;
+        if (trim(line).empty()) continue;
+        ++raw_rows;
+
         std::vector<std::string> tokens = split_csv_simple(line);
-        if (tokens.size() < 5) continue;
+        if (tokens.empty()) continue;
 
-        std::string label;
         float features[NUM_FEATURES]{};
-        bool valid_row = false;
+        int y = 0;
 
-        std::vector<float> numeric_before_label;
-        for (size_t i = 0; i + 1 < tokens.size(); ++i) {
-            if (is_numeric_token(tokens[i])) {
-                numeric_before_label.push_back(std::strtof(tokens[i].c_str(), nullptr));
+        bool parsed = false;
+        if (!header_checked) {
+            header_checked = true;
+            if (parse_one_hot_tail_row(tokens, {}, features, y, info, allow_discovery) ||
+                parse_scalar_label_row(tokens, features, y, info, allow_discovery)) {
+                parsed = true;
+            }
+            else {
+                header = tokens;
+                continue;
             }
         }
-        if (numeric_before_label.size() >= 4) {
-            size_t start = numeric_before_label.size() - 4;
-            for (int j = 0; j < NUM_FEATURES; ++j) {
-                features[j] = numeric_before_label[start + j];
-            }
-            label = trim(tokens.back());
-            valid_row = true;
+        else {
+            parsed = parse_one_hot_tail_row(tokens, header, features, y, info, allow_discovery) ||
+                parse_scalar_label_row(tokens, features, y, info, allow_discovery);
         }
 
-        if (!valid_row) continue;
-        ++total_rows;
-
-        auto it = std::find(class_order.begin(), class_order.end(), label);
-        if (it == class_order.end()) {
-            class_order.push_back(label);
+        if (!parsed) {
+            std::cerr << "Could not parse row " << raw_rows << " in " << path << std::endl;
+            std::exit(EXIT_FAILURE);
         }
 
-        if (class_order.size() > 2 && label != class_order[0] && label != class_order[1]) {
-            ++info.discarded_other_classes;
-            continue;
-        }
-
-        if (class_order.size() < 2 && label != class_order[0]) {
-            // unreachable in practice because the new label was already pushed above,
-            // but kept here to make the logic obvious.
-        }
-
-        int y = (label == class_order[0]) ? -1 : +1;
         for (int j = 0; j < NUM_FEATURES; ++j) {
             ds.x.push_back(features[j]);
         }
@@ -211,64 +335,19 @@ Dataset load_iris_binary_csv(const std::string& path, BinaryClassInfo& info) {
         ++kept_rows;
     }
 
-    if (class_order.size() < 2 || kept_rows == 0) {
-        std::cerr << "Could not find at least two valid Iris classes in " << path << std::endl;
+    if (kept_rows == 0) {
+        std::cerr << "No valid data rows found in " << path << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
+    if (!label_info_ready(info)) {
+        std::cerr << "Could not infer binary class mapping from " << path << std::endl;
         std::exit(EXIT_FAILURE);
     }
 
-    info.negative_label = class_order[0];
-    info.positive_label = class_order[1];
     ds.size = kept_rows;
 
-    std::cout << "Loaded " << total_rows << " valid rows from " << path << std::endl;
-    std::cout << "Keeping two classes for perceptron: [" << info.negative_label
-              << "] -> -1, [" << info.positive_label << "] -> +1" << std::endl;
-    if (info.discarded_other_classes > 0) {
-        std::cout << "Discarded rows from other classes: " << info.discarded_other_classes << std::endl;
-    }
+    std::cout << "Loaded " << kept_rows << " samples from " << path << std::endl;
     return ds;
-}
-
-void split_stratified(const Dataset& full, Dataset& train, Dataset& test, float train_ratio = 0.8f, int seed = 42) {
-    std::vector<int> neg_idx;
-    std::vector<int> pos_idx;
-    neg_idx.reserve(full.size);
-    pos_idx.reserve(full.size);
-
-    for (int i = 0; i < full.size; ++i) {
-        if (full.y[i] == -1) neg_idx.push_back(i);
-        else pos_idx.push_back(i);
-    }
-
-    std::mt19937 rng(seed);
-    std::shuffle(neg_idx.begin(), neg_idx.end(), rng);
-    std::shuffle(pos_idx.begin(), pos_idx.end(), rng);
-
-    auto append_subset = [&](const std::vector<int>& idx, Dataset& dst, int count) {
-        for (int i = 0; i < count; ++i) {
-            int src = idx[i];
-            for (int j = 0; j < NUM_FEATURES; ++j) {
-                dst.x.push_back(full.x[src * NUM_FEATURES + j]);
-            }
-            dst.y.push_back(full.y[src]);
-        }
-    };
-
-    int neg_train = static_cast<int>(std::round(train_ratio * neg_idx.size()));
-    int pos_train = static_cast<int>(std::round(train_ratio * pos_idx.size()));
-
-    neg_train = std::max(1, std::min(neg_train, static_cast<int>(neg_idx.size()) - 1));
-    pos_train = std::max(1, std::min(pos_train, static_cast<int>(pos_idx.size()) - 1));
-
-    append_subset(neg_idx, train, neg_train);
-    append_subset(pos_idx, train, pos_train);
-    append_subset(std::vector<int>(neg_idx.begin() + neg_train, neg_idx.end()), test,
-                  static_cast<int>(neg_idx.size()) - neg_train);
-    append_subset(std::vector<int>(pos_idx.begin() + pos_train, pos_idx.end()), test,
-                  static_cast<int>(pos_idx.size()) - pos_train);
-
-    train.size = static_cast<int>(train.y.size());
-    test.size = static_cast<int>(test.y.size());
 }
 
 StandardizationStats fit_standardization(const Dataset& train) {
@@ -306,18 +385,18 @@ void apply_standardization(Dataset& ds, const StandardizationStats& stats) {
 void print_dataset_summary(const Dataset& train, const Dataset& test, const BinaryClassInfo& info) {
     auto count_label = [](const Dataset& ds, int label) {
         return static_cast<int>(std::count(ds.y.begin(), ds.y.end(), label));
-    };
+        };
 
     std::cout << "Dataset summary" << std::endl;
     std::cout << "  Features per sample: " << NUM_FEATURES << std::endl;
     std::cout << "  Negative class (-1): " << info.negative_label << std::endl;
     std::cout << "  Positive class (+1): " << info.positive_label << std::endl;
     std::cout << "  Train samples: " << train.size
-              << " (neg=" << count_label(train, -1)
-              << ", pos=" << count_label(train, +1) << ")" << std::endl;
+        << " (neg=" << count_label(train, -1)
+        << ", pos=" << count_label(train, +1) << ")" << std::endl;
     std::cout << "  Test samples:  " << test.size
-              << " (neg=" << count_label(test, -1)
-              << ", pos=" << count_label(test, +1) << ")" << std::endl;
+        << " (neg=" << count_label(test, -1)
+        << ", pos=" << count_label(test, +1) << ")" << std::endl;
 }
 
 void print_model_info(int batch_size) {
@@ -332,7 +411,7 @@ void print_model_info(int batch_size) {
     std::cout << "  Trainable params: " << params_count << " (4 weights + 1 bias)" << std::endl;
     std::cout << "  Parameter memory: " << (param_bytes / 1024.0) << " KB" << std::endl;
     std::cout << "  Approx activation memory per batch: "
-              << (activation_bytes / (1024.0 * 1024.0)) << " MB" << std::endl;
+        << (activation_bytes / (1024.0 * 1024.0)) << " MB" << std::endl;
 }
 
 __global__ void perceptron_forward_kernel(
@@ -348,7 +427,7 @@ __global__ void perceptron_forward_kernel(
 
     const float* row = x + idx * NUM_FEATURES;
     float score = b[0];
-    #pragma unroll
+#pragma unroll
     for (int j = 0; j < NUM_FEATURES; ++j) {
         score += row[j] * w[j];
     }
@@ -500,7 +579,7 @@ void copy_contiguous_batch(
 void forward_pass(const PerceptronParams& params, BatchBuffers& buffers, int batch_size) {
     int threads = 128;
     int blocks = (batch_size + threads - 1) / threads;
-    perceptron_forward_kernel<<<blocks, threads>>>(
+    perceptron_forward_kernel << <blocks, threads >> > (
         buffers.d_x, params.d_w, params.d_b, buffers.d_scores, buffers.d_preds, batch_size);
     CHECK_CUDA(cudaGetLastError());
 }
@@ -508,26 +587,26 @@ void forward_pass(const PerceptronParams& params, BatchBuffers& buffers, int bat
 void metric_pass(BatchBuffers& buffers, int batch_size) {
     int threads = 128;
     int blocks = (batch_size + threads - 1) / threads;
-    perceptron_metric_kernel<<<blocks, threads>>>(
+    perceptron_metric_kernel << <blocks, threads >> > (
         buffers.d_scores, buffers.d_preds, buffers.d_y,
         buffers.d_losses, buffers.d_correct, buffers.d_errors, batch_size);
     CHECK_CUDA(cudaGetLastError());
 }
 
 void backward_pass(PerceptronParams& params, BatchBuffers& buffers, int batch_size) {
-    zero_grad_kernel<<<1, 32>>>(params.d_gw, params.d_gb, params.d_mistakes);
+    zero_grad_kernel << <1, 32 >> > (params.d_gw, params.d_gb, params.d_mistakes);
     CHECK_CUDA(cudaGetLastError());
 
     int threads = 128;
     int blocks = (batch_size + threads - 1) / threads;
-    accumulate_misclassified_kernel<<<blocks, threads>>>(
+    accumulate_misclassified_kernel << <blocks, threads >> > (
         buffers.d_x, buffers.d_y, buffers.d_errors,
         params.d_gw, params.d_gb, params.d_mistakes, batch_size);
     CHECK_CUDA(cudaGetLastError());
 }
 
 void update_params(PerceptronParams& params, float lr) {
-    apply_update_kernel<<<1, 32>>>(params.d_w, params.d_b, params.d_gw, params.d_gb, params.d_mistakes, lr);
+    apply_update_kernel << <1, 32 >> > (params.d_w, params.d_b, params.d_gw, params.d_gb, params.d_mistakes, lr);
     CHECK_CUDA(cudaGetLastError());
 }
 
@@ -610,25 +689,25 @@ EvalMetrics evaluate(const Dataset& ds, PerceptronParams& params, BatchBuffers& 
     return m;
 }
 
-LatencyMetrics benchmark_single_image_latency(
+LatencyMetrics benchmark_single_sample_latency(
     const Dataset& test_ds,
     PerceptronParams& params,
     BatchBuffers& buffers,
     int warmup = 20,
     int reps = 200
 ) {
-    float* h_img = nullptr;
-    int* h_lbl = nullptr;
-    CHECK_CUDA(cudaMallocHost(reinterpret_cast<void**>(&h_img), bytes_of(NUM_FEATURES)));
-    CHECK_CUDA(cudaMallocHost(reinterpret_cast<void**>(&h_lbl), sizeof(int)));
+    float* h_sample = nullptr;
+    int* h_label = nullptr;
+    CHECK_CUDA(cudaMallocHost(reinterpret_cast<void**>(&h_sample), bytes_of(NUM_FEATURES)));
+    CHECK_CUDA(cudaMallocHost(reinterpret_cast<void**>(&h_label), sizeof(int)));
 
     for (int j = 0; j < NUM_FEATURES; ++j) {
-        h_img[j] = test_ds.x[j];
+        h_sample[j] = test_ds.x[j];
     }
-    h_lbl[0] = test_ds.y[0];
+    h_label[0] = test_ds.y[0];
 
-    CHECK_CUDA(cudaMemcpy(buffers.d_x, h_img, bytes_of(NUM_FEATURES), cudaMemcpyHostToDevice));
-    CHECK_CUDA(cudaMemcpy(buffers.d_y, h_lbl, sizeof(int), cudaMemcpyHostToDevice));
+    CHECK_CUDA(cudaMemcpy(buffers.d_x, h_sample, bytes_of(NUM_FEATURES), cudaMemcpyHostToDevice));
+    CHECK_CUDA(cudaMemcpy(buffers.d_y, h_label, sizeof(int), cudaMemcpyHostToDevice));
 
     cudaEvent_t ev0, ev1;
     CHECK_CUDA(cudaEventCreate(&ev0));
@@ -662,8 +741,8 @@ LatencyMetrics benchmark_single_image_latency(
 
     CHECK_CUDA(cudaEventDestroy(ev0));
     CHECK_CUDA(cudaEventDestroy(ev1));
-    CHECK_CUDA(cudaFreeHost(h_img));
-    CHECK_CUDA(cudaFreeHost(h_lbl));
+    CHECK_CUDA(cudaFreeHost(h_sample));
+    CHECK_CUDA(cudaFreeHost(h_label));
     return m;
 }
 
@@ -762,18 +841,18 @@ PhaseTiming train(
         }
 
         std::cout << std::fixed << std::setprecision(4)
-                  << "Epoch " << (epoch + 1) << "/" << epochs
-                  << " | train_loss=" << (epoch_loss / seen)
-                  << " | train_acc=" << (100.0 * correct / seen) << "%"
-                  << " | epoch_gpu_ms=" << epoch_ms
-                  << " | epoch_throughput=" << (1000.0 * seen / epoch_ms) << " samples/s"
-                  << std::endl;
+            << "Epoch " << (epoch + 1) << "/" << epochs
+            << " | train_loss=" << (epoch_loss / seen)
+            << " | train_acc=" << (100.0 * correct / seen) << "%"
+            << " | epoch_gpu_ms=" << epoch_ms
+            << " | epoch_throughput=" << (1000.0 * seen / epoch_ms) << " samples/s"
+            << std::endl;
 
         final_test_metrics = evaluate(test_ds, params, buffers, batch_size);
         std::cout << "  test_loss=" << final_test_metrics.loss
-                  << " | test_acc=" << (100.0 * final_test_metrics.accuracy) << "%"
-                  << " | infer_avg_batch_ms=" << final_test_metrics.avg_batch_ms
-                  << std::endl;
+            << " | test_acc=" << (100.0 * final_test_metrics.accuracy) << "%"
+            << " | infer_avg_batch_ms=" << final_test_metrics.avg_batch_ms
+            << std::endl;
     }
 
     auto wall_end = std::chrono::high_resolution_clock::now();
@@ -804,15 +883,17 @@ void print_learned_parameters(PerceptronParams& params) {
 }
 
 int main(int argc, char** argv) {
-    std::string iris_csv = "iris.csv";
+    std::string train_csv = "iris_train.csv";
+    std::string test_csv = "iris_test.csv";
     int epochs = 30;
     int batch_size = 16;
     float lr = 0.10f;
 
-    if (argc >= 2) iris_csv = argv[1];
-    if (argc >= 3) epochs = std::stoi(argv[2]);
-    if (argc >= 4) batch_size = std::stoi(argv[3]);
-    if (argc >= 5) lr = std::stof(argv[4]);
+    if (argc >= 2) train_csv = argv[1];
+    if (argc >= 3) test_csv = argv[2];
+    if (argc >= 4) epochs = std::stoi(argv[3]);
+    if (argc >= 5) batch_size = std::stoi(argv[4]);
+    if (argc >= 6) lr = std::stof(argv[5]);
 
     int device = 0;
     cudaDeviceProp prop{};
@@ -820,15 +901,13 @@ int main(int argc, char** argv) {
     CHECK_CUDA(cudaSetDevice(device));
 
     std::cout << "Using GPU: " << prop.name << std::endl;
-    std::cout << "CSV: " << iris_csv << std::endl;
+    std::cout << "Train CSV: " << train_csv << std::endl;
+    std::cout << "Test CSV:  " << test_csv << std::endl;
     std::cout << "Epochs=" << epochs << ", batch_size=" << batch_size << ", lr=" << lr << std::endl;
 
     BinaryClassInfo class_info;
-    Dataset full = load_iris_binary_csv(iris_csv, class_info);
-
-    Dataset train_ds;
-    Dataset test_ds;
-    split_stratified(full, train_ds, test_ds);
+    Dataset train_ds = load_binary_iris_csv(train_csv, class_info, true);
+    Dataset test_ds = load_binary_iris_csv(test_csv, class_info, false);
 
     StandardizationStats stats = fit_standardization(train_ds);
     apply_standardization(train_ds, stats);
@@ -844,7 +923,7 @@ int main(int argc, char** argv) {
 
     EvalMetrics test_metrics;
     PhaseTiming timing = train(train_ds, test_ds, params, buffers, epochs, batch_size, lr, test_metrics);
-    LatencyMetrics single = benchmark_single_image_latency(test_ds, params, buffers);
+    LatencyMetrics single = benchmark_single_sample_latency(test_ds, params, buffers);
 
     double total_batches = static_cast<double>((train_ds.size + batch_size - 1) / batch_size) * epochs;
     double measured_total = timing.h2d_ms + timing.forward_ms + timing.metric_ms + timing.backward_ms + timing.update_ms;
@@ -874,8 +953,8 @@ int main(int argc, char** argv) {
     std::cout << "Recall                              : " << test_metrics.recall << "\n";
     std::cout << "F1 score                            : " << test_metrics.f1 << "\n";
     std::cout << "Confusion matrix (TP/TN/FP/FN)      : "
-              << test_metrics.tp << " / " << test_metrics.tn << " / "
-              << test_metrics.fp << " / " << test_metrics.fn << "\n";
+        << test_metrics.tp << " / " << test_metrics.tn << " / "
+        << test_metrics.fp << " / " << test_metrics.fn << "\n";
     std::cout << "Total GPU inference time            : " << test_metrics.total_infer_ms << " ms\n";
     std::cout << "Average batch GPU latency           : " << test_metrics.avg_batch_ms << " ms\n";
     std::cout << "Average sample GPU latency          : " << test_metrics.avg_sample_ms << " ms\n";
@@ -883,7 +962,7 @@ int main(int argc, char** argv) {
     std::cout << "Batch latency p95                   : " << test_metrics.p95_batch_ms << " ms\n";
     std::cout << "Inference throughput                : " << test_metrics.throughput_samples_per_sec << " samples/s\n";
 
-    std::cout << "\n============= Single-Image Latency Benchmark =============\n";
+    std::cout << "\n============= Single-Sample Latency Benchmark =============\n";
     std::cout << "Mean latency                        : " << single.mean_ms << " ms\n";
     std::cout << "Min latency                         : " << single.min_ms << " ms\n";
     std::cout << "Max latency                         : " << single.max_ms << " ms\n";
