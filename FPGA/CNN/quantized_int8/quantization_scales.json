@@ -1,0 +1,68 @@
+[
+    {
+        "layer_name": "conv2d",
+        "weight_scale": 353.1329650878906,
+        "weight_shape": [
+            3,
+            3,
+            1,
+            32
+        ],
+        "bias_scale": 947.6626586914062,
+        "bias_shape": [
+            32
+        ]
+    },
+    {
+        "layer_name": "conv2d_1",
+        "weight_scale": 345.0519714355469,
+        "weight_shape": [
+            3,
+            3,
+            32,
+            64
+        ],
+        "bias_scale": 1083.9500732421875,
+        "bias_shape": [
+            64
+        ]
+    },
+    {
+        "layer_name": "conv2d_2",
+        "weight_scale": 375.3674011230469,
+        "weight_shape": [
+            3,
+            3,
+            64,
+            64
+        ],
+        "bias_scale": 2723.7998046875,
+        "bias_shape": [
+            64
+        ]
+    },
+    {
+        "layer_name": "dense",
+        "weight_scale": 319.1611633300781,
+        "weight_shape": [
+            576,
+            64
+        ],
+        "bias_scale": 2072.884033203125,
+        "bias_shape": [
+            64
+        ]
+    },
+    {
+        "layer_name": "dense_1",
+        "weight_scale": 304.61090087890625,
+        "weight_shape": [
+            64,
+            10
+        ],
+        "bias_scale": 1950.546630859375,
+        "bias_shape": [
+            10
+        ]
+    }
+]
