@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module perceptron_top (
     input  logic clk,
     input  logic rst,
@@ -26,7 +28,7 @@ module perceptron_top (
             cycle_counter <= cycle_counter + 1;
     end
 
-    // Pipeline
+    // Pipeline Stage 1: multiply
     always_ff @(posedge clk or posedge rst) begin
         if (rst) begin
             mult0 <= 0; mult1 <= 0; mult2 <= 0; mult3 <= 0;
@@ -38,6 +40,7 @@ module perceptron_top (
         end
     end
 
+    // Pipeline Stage 2: accumulate
     always_ff @(posedge clk or posedge rst) begin
         if (rst)
             sum <= 0;
@@ -45,6 +48,7 @@ module perceptron_top (
             sum <= mult0 + mult1 + mult2 + mult3 + BIAS;
     end
 
+    // Pipeline Stage 3: activation (step function)
     always_ff @(posedge clk or posedge rst) begin
         if (rst)
             y_out <= 0;
@@ -54,27 +58,25 @@ module perceptron_top (
 
     assign debug_dot = sum;
 
-    // Timing
+    // Latency measurement (3-cycle pipeline after start)
     logic [31:0] start_cycle, end_cycle;
     logic [1:0] latency_counter;
     logic measuring;
 
     always_ff @(posedge clk or posedge rst) begin
         if (rst) begin
-            measuring <= 0;
+            measuring       <= 0;
             latency_counter <= 0;
-            start_cycle <= 0;
-            end_cycle <= 0;
+            start_cycle     <= 0;
+            end_cycle       <= 0;
         end else begin
             if (start) begin
-                start_cycle <= cycle_counter;
+                start_cycle     <= cycle_counter;
                 latency_counter <= 0;
-                measuring <= 1;
-            end
-            else if (measuring) begin
+                measuring       <= 1;
+            end else if (measuring) begin
                 latency_counter <= latency_counter + 1;
-
-                if (latency_counter == 3) begin
+                if (latency_counter == 2'd3) begin
                     end_cycle <= cycle_counter;
                     measuring <= 0;
                 end
