@@ -1,0 +1,2 @@
+workload,dtype,batch_size,total_samples,throughput,latency_p50,latency_p99,energy_total,avg_power,achieved_gflops,utilization_pct,arith_intensity,phase_staging,phase_compute,phase_output,tta_sec
+mnist_cnn_gpu_infer,fp32,64,70000,566120.932142,0.001748,0.003778,8.002220,32.341836,217.462901,0.041336,122.478061,45.077402,123.648493,39.422720,N/A

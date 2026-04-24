@@ -1,0 +1,2 @@
+Model,Precision,Batch_Size,Train_Acc,Val_Acc,Final_Loss,Conv_Epochs
+mnist_cnn_gpu,fp32,64,0.975967,0.976300,0.073510,10
