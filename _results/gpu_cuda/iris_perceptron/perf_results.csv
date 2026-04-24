@@ -1,3 +1,2 @@
 workload,dtype,batch_size,throughput,latency_p50,latency_p99,energy_total,avg_power,achieved_gflops,utilization_pct,arith_intensity,phase_staging,phase_compute,phase_output,tta_sec
-iris_perceptron_train_infer,fp32,16,372045.789076,0.002626,0.005160,0.000000,0.000000,0.003348,0.000001,0.562491,94.061453,215.027296,196.203117,N/A
-iris_perceptron_test_infer,fp32,16,376311.248871,0.011168,0.051042,0.000000,0.000000,0.003387,0.000001,0.562465,24.329248,53.147494,48.864979,N/A
+iris_perceptron_full_infer,fp32,16,336821.191310,0.043008,0.084992,9.486852,9.324117,0.003031,0.000001,0.562493,189.492646,296.893434,280.266087,N/A
