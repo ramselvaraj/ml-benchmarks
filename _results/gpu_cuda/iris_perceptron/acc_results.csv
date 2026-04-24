@@ -1,0 +1,2 @@
+Model,Precision,Train_Acc,Val_Acc,Final_Loss,Conv_Epochs,MSE_Golden
+perceptron_gpu,fp32,1.000000,1.000000,0.000000,30,N/A
