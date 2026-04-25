@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module testbench;
 
     logic clk;
@@ -10,8 +12,9 @@ module testbench;
     logic [31:0] elapsed_cycles;
 
     logic y_true;
-    int   y_true_i;
-    int   file;
+    int   file_in;
+    int   file_acc_out;
+    int   file_perf_out;
     int   ret;
     int   rc;
     reg [1023:0] header;
@@ -23,18 +26,19 @@ module testbench;
     logic [31:0] TP, TN, FP, FN;
     logic [31:0] correct_hw, total_hw;
 
-    real FCLK_HZ = 100_000_000.0;
+    real FCLK_HZ = 100_000_000.0; // 100 MHz
 
-    real time_ms;
+    real phase_compute_ms;
     real throughput;
+    real latency_ms;
     real accuracy;
-    real precision;
-    real recall;
-    real f1;
-    real forward_ms;
+    real achieved_gflops;
+    real arith_intensity;
 
     real f0, f1_in, f2, f3;
+    string label_str;
 
+    // DUT Instantiation
     perceptron_top dut (
         .clk(clk),
         .rst(rst),
@@ -45,6 +49,7 @@ module testbench;
         .elapsed_cycles(elapsed_cycles)
     );
 
+    // Benchmark module instantiation
     fpga_benchmark bench (
         .clk(clk),
         .rst(rst),
@@ -58,120 +63,191 @@ module testbench;
         .total(total_hw)
     );
 
+    // Clock generation
     always #5 clk = ~clk;
 
     initial begin
+        // --- VCD Dump for Vivado Power Analyzer ---
+        // This file is strictly required for Phase 2 "Power Pass"
+        $dumpfile("waveform.vcd");
+        $dumpvars(0, testbench);
+
+        // Initialization
         clk = 0;
         rst = 1;
         start = 0;
         start_run = 0;
         valid_out = 0;
-        x[0] = 0;
-        x[1] = 0;
-        x[2] = 0;
-        x[3] = 0;
+        x[0] = 0; x[1] = 0; x[2] = 0; x[3] = 0;
+        
         #20;
         rst = 0;
     end
 
-        string label_str;
-
     initial begin
-        file = $fopen("iris_test.csv", "r");
-        if (file == 0) begin
-            $display("ERROR: Cannot open file");
+        // Open inputs and output CSV files
+        file_in = $fopen("iris_test_20k.csv", "r");
+        file_acc_out = $fopen("acc_results.csv", "w");
+        file_perf_out = $fopen("perf_results.csv", "w");
+
+        if (file_in == 0) begin
+            $display("ERROR: Cannot open iris_test.csv");
             $finish;
         end
 
-        $display("CSV opened successfully");
+        // Write headers to output CSV files
+        $fdisplay(file_acc_out, "Model,Precision,Train_Acc,Val_Acc,Final_Loss,Conv_Epochs,MSE_Golden");
+        $fdisplay(file_perf_out, "workload,dtype,batch_size,throughput,latency_p50,latency_p99,energy_total,avg_power,achieved_gflops,utilization_pct,arith_intensity,phase_staging,phase_compute,phase_output,tta_sec");
 
-        // Skip header row
-        rc = $fgets(header, file);
-        $display("Skipped header: %0s", header);
+        // Skip input header row
+        rc = $fgets(header, file_in);
 
+        // Pulse start_run for the benchmark module
         start_run = 1;
         @(posedge clk);
         start_run = 0;
 
         while (1) begin
-            ret = $fscanf(file, "%f,%f,%f,%f,%s\n", f0, f1_in, f2, f3, label_str);
+            ret = $fscanf(file_in, "%f,%f,%f,%f,%s\n", f0, f1_in, f2, f3, label_str);
 
-            if (ret != 5) begin
-                $display("Reached end of file or bad row, ret=%0d", ret);
-                break;
-            end
+            if (ret != 5) break;
 
-            // Encode English labels to binary classes
             if (label_str == "Setosa" || label_str == "setosa")
                 y_true = 0;
             else if (label_str == "Versicolor" || label_str == "versicolor")
                 y_true = 1;
-            else begin
-                $display("WARNING: Unknown label '%0s', skipping row", label_str);
-                continue;
-            end
+            else continue;
 
+            // Convert to Fixed 16.8
             x[0] = $rtoi(f0    * 256.0);
             x[1] = $rtoi(f1_in * 256.0);
             x[2] = $rtoi(f2    * 256.0);
             x[3] = $rtoi(f3    * 256.0);
 
-            $display("--------------------------------------");
-            $display("Applying row at t=%0t", $time);
-            $display("Input: %f %f %f %f", f0, f1_in, f2, f3);
-            $display("Fixed: %0d %0d %0d %0d", x[0], x[1], x[2], x[3]);
-            $display("Label string = %0s", label_str);
-            $display("Actual label encoded = %0d", y_true);
-
+            // Trigger DUT
             start = 1;
             @(posedge clk);
             start = 0;
 
+            // Wait for deterministic compute (Assuming 4 cycles based on previous code)
             repeat (4) @(posedge clk);
 
             valid_out = 1;
             @(posedge clk);
             valid_out = 0;
-
-            $display("Dot = %0d", debug_dot);
-            $display("Predicted = %0d | Actual = %0d", y_pred, y_true);
-            $display("Cycles = %0d", elapsed_cycles);
-            $display("Time (ms) = %f", elapsed_cycles / 100000.0);
         end
 
+        // Wait for pipeline to flush
         repeat (5) @(posedge clk);
 
-        forward_ms = (4.0 / FCLK_HZ) * 1000.0;
-        time_ms = (total_cycles / FCLK_HZ) * 1000.0;
-        throughput = (time_ms > 0.0) ? (total_hw / (time_ms / 1000.0)) : 0.0;
+        // ==========================================
+        // PERFORMANCE & ACCURACY METRICS CALCULATION
+        // ==========================================
+        
+        // Time calculations
+        phase_compute_ms = (total_cycles / FCLK_HZ) * 1000.0;
+        latency_ms = (elapsed_cycles > 0) ? ((elapsed_cycles / FCLK_HZ) * 1000.0) : ((4.0 / FCLK_HZ) * 1000.0);
+        
+        // Throughput (samples per second)
+        throughput = (phase_compute_ms > 0.0) ? (total_hw / (phase_compute_ms / 1000.0)) : 0.0;
 
+        // Accuracy
         accuracy  = (total_hw > 0) ? (correct_hw * 1.0 / total_hw) : 0.0;
-        precision = (TP + FP > 0)  ? (TP * 1.0 / (TP + FP)) : 0.0;
-        recall    = (TP + FN > 0)  ? (TP * 1.0 / (TP + FN)) : 0.0;
-        f1        = (precision + recall > 0.0) ?
-                    (2.0 * precision * recall / (precision + recall)) : 0.0;
+
+        // GFLOPS calculation: 4 inputs = 4 Multiplies + 3 Additions = 7 Operations per inference
+        achieved_gflops = (phase_compute_ms > 0.0) ? ((total_hw * 7.0) / (phase_compute_ms / 1000.0) / 1000000000.0) : 0.0;
+        
+        // Arithmetic Intensity: 7 ops / (4 inputs * 2 bytes) = 7/8 = 0.875
+        arith_intensity = 7.0 / 8.0;
+
+        // ==========================================
+        // WRITE TO CSV FILES
+        // ==========================================
+        
+        // Write acc_results.csv
+        // Model, Precision, Train_Acc, Val_Acc, Final_Loss, Conv_Epochs, MSE_Golden
+        // Note: Inference only, so Train metrics are N/A. MSE_Golden relies on Python reference, defaulting to 0 for FPGA sim isolated run.
+        $fdisplay(file_acc_out, "perceptron,Fixed-16.8,N/A,%f,N/A,N/A,0.0", accuracy);
+
+        // Write perf_results.csv
+        // workload, dtype, batch_size, throughput, latency_p50, latency_p99, energy_total, avg_power, achieved_gflops, utilization_pct, arith_intensity, phase_staging, phase_compute, phase_output, tta_sec
+        // Note: FPGA latency is deterministic, so p50 = p99. Energy/Power require Vivado Analyzer (marked as SEE_VCD). Staging/Output is 0ms in sim.
+        $fdisplay(file_perf_out, "iris_perceptron,fixed_16_8,%0d,%f,%f,%f,SEE_VCD,SEE_VCD,%f,0.0,%f,0.0,%f,0.0,N/A", 
+                  total_hw, throughput, latency_ms, latency_ms, achieved_gflops, arith_intensity, phase_compute_ms);
 
         $display("======================================");
-        $display("Clock Frequency (Hz) = %f", FCLK_HZ);
-        $display("input_staging_ms = 0");
-        $display("forward_ms = %f", forward_ms);
-        $display("loss_metric_ms = 0");
-        $display("backward_ms = 0");
-        $display("update_ms = 0");
-        $display("--------------------------------------");
-        $display("Total Time (ms) = %f", time_ms);
-        $display("Throughput = %f samples/sec", throughput);
-        $display("Memory (bytes) = <from Vivado>");
-        $display("--------------------------------------");
-        $display("Accuracy  = %f", accuracy);
-        $display("Precision = %f", precision);
-        $display("Recall    = %f", recall);
-        $display("F1        = %f", f1);
-        $display("TP=%0d TN=%0d FP=%0d FN=%0d", TP, TN, FP, FN);
+        $display("Simulation Complete.");
+        $display("Generated acc_results.csv and perf_results.csv");
+        $display("Generated waveform.vcd for Vivado Power Analyzer");
+        $display("Accuracy = %f | Throughput = %f SPS", accuracy, throughput);
         $display("======================================");
 
-        $fclose(file);
+        $fclose(file_in);
+        $fclose(file_acc_out);
+        $fclose(file_perf_out);
         $finish;
+    end
+
+endmodule
+
+
+// ==========================================
+// FPGA Benchmark Module
+// ==========================================
+`timescale 1ns / 1ps
+
+module fpga_benchmark (
+    input  logic clk,
+    input  logic rst,
+    input  logic start,
+    input  logic valid_out,
+    input  logic y_pred,
+    input  logic y_true,
+
+    output logic [31:0] total_cycles,
+    output logic [31:0] TP, TN, FP, FN,
+    output logic [31:0] correct,
+    output logic [31:0] total
+);
+
+    logic [31:0] cycle_counter;
+    logic [31:0] start_cycle;
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst)
+            cycle_counter <= 0;
+        else
+            cycle_counter <= cycle_counter + 1;
+    end
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            start_cycle  <= 0;
+            total_cycles <= 0;
+        end else begin
+            if (start)
+                start_cycle <= cycle_counter;
+            if (valid_out)
+                total_cycles <= cycle_counter - start_cycle;
+        end
+    end
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            TP <= 0; TN <= 0; FP <= 0; FN <= 0;
+            correct <= 0;
+            total   <= 0;
+        end else if (valid_out) begin
+            total <= total + 1;
+
+            if (y_pred == y_true)
+                correct <= correct + 1;
+
+            if (y_true == 1'b1 && y_pred == 1'b1) TP <= TP + 1;
+            if (y_true == 1'b0 && y_pred == 1'b0) TN <= TN + 1;
+            if (y_true == 1'b0 && y_pred == 1'b1) FP <= FP + 1;
+            if (y_true == 1'b1 && y_pred == 1'b0) FN <= FN + 1;
+        end
     end
 
 endmodule

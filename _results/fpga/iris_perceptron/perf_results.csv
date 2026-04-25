@@ -1,0 +1,2 @@
+workload,dtype,batch_size,throughput,latency_p50,latency_p99,energy_total,avg_power,achieved_gflops,utilization_pct,arith_intensity,phase_staging,phase_compute,phase_output,tta_sec
+iris_perceptron,fixed_16_8,20000,16667083.34,0.00004,0.00004,0.00024,0.2,0.11667,0,0.875,0,1.19997,0,N/A
