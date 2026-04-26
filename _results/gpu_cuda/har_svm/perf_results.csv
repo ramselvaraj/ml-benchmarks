@@ -1,0 +1,2 @@
+workload,dtype,batch_size,total_samples,throughput,latency_p50,latency_p99,energy_total,avg_power,achieved_gflops,utilization_pct,arith_intensity,phase_staging,phase_compute,phase_output,tta_sec
+har_svm_gpu_infer,fp32,16,165633,280198.409706,0.002910,0.006496,11.981602,7.089571,0.050436,0.000010,2.499920,252.139661,591.127552,506.454368,N/A

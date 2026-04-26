@@ -1,0 +1,2 @@
+Model,Precision,Batch_Size,Train_Acc,Val_Acc,Final_Loss,Conv_Epochs
+har_svm_gpu,fp32,16,0.802967,0.807559,0.980291,4
