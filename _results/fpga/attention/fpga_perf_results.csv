@@ -1,0 +1,2 @@
+workload,dtype,batch_size,throughput,latency_p50,latency_p99,energy_total,avg_power,achieved_gflops,utilization_pct,arith_intensity,phase_staging,phase_compute,phase_output,tta_sec
+attention_int8_causal_mha,int8_w_fp16_out,1,200.7,0.00498,0.00498,N/A,N/A,0.421,78,87.5,N/A,0.00498,N/A,N/A
