@@ -1,0 +1,2 @@
+Model,Precision,Train_Acc,Val_Acc,Final_Loss,Conv_Epochs,MSE_Golden
+svm,Float-32,0.8521791630504509,0.8529598212938087,0,1,0

@@ -1,0 +1,2 @@
+workload,dtype,batch_size,throughput,latency_p50,latency_p99,energy_total,avg_power,achieved_gflops,utilization_pct,arith_intensity,phase_staging,phase_compute,phase_output,tta_sec
+mnist_cnn,float32,1,18393.036937768156,0.05436840057373047,0.05436840057373047,5.229610323006766,9.618841584119712,28.661354455089864,5.33135313524737,488.85578272540914,0,0.5436840057373047,0,0.5436840057373047

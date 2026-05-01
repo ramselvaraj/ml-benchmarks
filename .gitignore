@@ -20,10 +20,8 @@ __pycache__/
 *.pth
 *.model
 
-# Generated result files (CSVs, logs)
-**/perf_results.csv
-**/acc_results.csv
-**/*.log
+
+
 
 # IDE and editor files
 .vscode/
@@ -43,6 +41,5 @@ Thumbs.db
 htmlcov/
 
 # Project-specific
-_results/**/*.csv
-_results/**/*.json
+
 test_imports.py
