@@ -1,0 +1,34 @@
+# Llama-3.1-70B — production-scale GQA, latest Llama generation.
+#
+# Same architectural shape as Llama-2-70B and Llama-3-70B (H=8192,
+# 64 q heads, 8 kv heads, head_dim=128, RoPE). Differs only in:
+#   - newer pretraining run + post-training data
+#   - rope_theta 500000 (was 10000 in Llama-2-70B)
+#   - 128K context via NTK scaling (un-scaled in our wrapper; see notes
+#     in llama31_8b_gqa.yaml — fine because we sweep within original_max)
+#
+# Recommended over Llama-2-70B if you have access to both — Llama-3.1
+# weights are newer, the licensing flow is the same, and timing should
+# be within noise of Llama-3-70B (useful version-stability check if both
+# are run).
+#
+# OOM cap: same as the other H=8192 configs — see comments below.
+name: llama31_70b_gqa
+hf_repo: meta-llama/Meta-Llama-3.1-70B
+variant: GQA
+layer_index: 0
+hidden_size: 8192
+num_attention_heads: 64
+num_key_value_heads: 8
+head_dim: 128
+max_position_embeddings: 131072
+rope_theta: 500000.0
+weights_path: weights/llama31_70b_gqa_layer0.safetensors
+sweeps:
+  seq_lens: [128, 256, 512, 1024, 2048, 4096, 8192]
+  batches:  [1, 4, 16, 32]
+  # H=8192: ~98 KB activation per (B*S) element across the live tensors.
+  # Cap at B*S=65536 → live footprint <6 GB, total VRAM <25 GB on L40S.
+  max_bs_product: 65536
+warmup: 10
+iters:   50

@@ -1,0 +1,16 @@
+name: llama2_7b_mha
+hf_repo: meta-llama/Llama-2-7b-hf
+variant: MHA
+layer_index: 0
+hidden_size: 4096
+num_attention_heads: 32
+num_key_value_heads: 32
+head_dim: 128
+max_position_embeddings: 4096
+rope_theta: 10000.0
+weights_path: weights/llama2_7b_mha_layer0.safetensors
+sweeps:
+  seq_lens: [128, 256, 512, 1024, 2048, 4096, 8192]
+  batches:  [1, 4, 16, 32]
+warmup: 10
+iters:   50

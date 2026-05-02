@@ -1,0 +1,92 @@
+2026-04-25 18:41:53,119 - INFO - flashinfer.jit: Loading JIT ops: batch_prefill_with_kv_cache_dtype_q_bf16_dtype_kv_bf16_dtype_o_bf16_dtype_idx_i32_head_dim_qk_192_head_dim_vo_128_posenc_0_use_swa_False_use_logits_cap_False_f16qk_False
+/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torch/utils/cpp_extension.py:2059: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torch/utils/cpp_extension.py:2059: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[run_bench] OVERWRITING existing /home/ngantaya/sid/attention-benchmarking/results/deepseek_v2_mla_cuda_int4.jsonl (pass --append to keep prior rows)
+2026-04-25 18:41:53,172 - INFO - flashinfer.jit: Finished loading JIT ops: batch_prefill_with_kv_cache_dtype_q_bf16_dtype_kv_bf16_dtype_o_bf16_dtype_idx_i32_head_dim_qk_192_head_dim_vo_128_posenc_0_use_swa_False_use_logits_cap_False_f16qk_False
+[deepseek_v2_mla|cuda|int4] B=1 S=128  median=10.803 ms  throughput=11848.3 tok/s  3660 GFLOPs/s    0.5% util  AI=123.59 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=1 S=256  median=9.210 ms  throughput=27796.3 tok/s  8879 GFLOPs/s    1.2% util  AI=239.47 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=1 S=512  median=10.990 ms  throughput=46589.6 tok/s  15859 GFLOPs/s    2.2% util  AI=453.27 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=1 S=1024  median=18.898 ms  throughput=54185.9 tok/s  20717 GFLOPs/s    2.9% util  AI=832.04 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=1 S=2048  median=35.763 ms  throughput=57265.6 tok/s  26699 GFLOPs/s    3.7% util  AI=1485.77 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=1 S=4096  median=69.407 ms  throughput=59014.5 tok/s  37415 GFLOPs/s    5.2% util  AI=2631.47 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=1 S=8192  median=99.693 ms  throughput=82172.6 tok/s  79670 GFLOPs/s   11.0% util  AI=4741.12 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=4 S=128  median=7.574 ms  throughput=67604.1 tok/s  20885 GFLOPs/s    2.9% util  AI=411.38 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=4 S=256  median=12.350 ms  throughput=82911.9 tok/s  26484 GFLOPs/s    3.7% util  AI=695.12 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=4 S=512  median=20.962 ms  throughput=97699.2 tok/s  33256 GFLOPs/s    4.6% util  AI=1084.78 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=4 S=1024  median=39.035 ms  throughput=104931.8 tok/s  40119 GFLOPs/s    5.5% util  AI=1586.93 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=4 S=2048  median=69.474 ms  throughput=117914.1 tok/s  54974 GFLOPs/s    7.6% util  AI=2279.86 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=4 S=4096  median=125.393 ms  throughput=130661.3 tok/s  82839 GFLOPs/s   11.4% util  AI=3403.45 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=4 S=8192  median=450.011 ms  throughput=72816.0 tok/s  70598 GFLOPs/s    9.8% util  AI=5472.31 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=16 S=128  median=20.992 ms  throughput=97561.0 tok/s  30140 GFLOPs/s    4.2% util  AI=984.53 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=16 S=256  median=36.641 ms  throughput=111788.1 tok/s  35708 GFLOPs/s    4.9% util  AI=1325.80 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=16 S=512  median=65.450 ms  throughput=125164.3 tok/s  42605 GFLOPs/s    5.9% util  AI=1664.55 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=16 S=1024  median=146.169 ms  throughput=112089.6 tok/s  42856 GFLOPs/s    5.9% util  AI=2052.49 FLOPs/byte
+[deepseek_v2_mla|cuda|int4] B=16 S=2048  median=330.300 ms  throughput=99206.7 tok/s  46252 GFLOPs/s    6.4% util  AI=2631.47 FLOPs/byte
+Traceback (most recent call last):
+  File "/home/ngantaya/sid/attention-benchmarking/scripts/run_bench.py", line 357, in <module>
+    main()
+  File "/home/ngantaya/sid/attention-benchmarking/scripts/run_bench.py", line 268, in main
+    stats = time_callable(fwd, device=args.device, warmup=warmup, iters=iters)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/sid/attention-benchmarking/src/bench/timing.py", line 38, in time_callable
+    out = fn()
+          ^^^^
+  File "/home/ngantaya/sid/attention-benchmarking/scripts/run_bench.py", line 264, in fwd
+    return mod(inputs.hidden_states, inputs.position_ids, inputs.attention_mask)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/sid/attention-benchmarking/src/attention/deepseek_mla.py", line 277, in forward
+    return self.o_proj(out)
+           ^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torchao/utils.py", line 433, in _dispatch__torch_function__
+    return cls._ATEN_OP_OR_TORCH_FN_TABLE[func](func, types, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torchao/utils.py", line 412, in wrapper
+    return func(f, types, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torchao/quantization/linear_activation_quantized_tensor.py", line 126, in _
+    return weight_tensor._quantized_linear_op(input_tensor, weight_tensor, bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torchao/quantization/linear_activation_quantized_tensor.py", line 83, in _quantized_linear_op
+    quantized_tensor = input_quant_func(input_tensor, **quant_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torchao/quantization/quant_api.py", line 546, in _int8_asymm_per_token_quant
+    return to_affine_quantized_intx(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torchao/dtypes/affine_quantized_tensor.py", line 267, in from_hp_to_intx
+    data = quantize_affine(
+           ^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torchao/quantization/quant_primitives.py", line 293, in quantize_affine
+    return _quantize_affine(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torch/_ops.py", line 1123, in __call__
+    return self._op(*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torchao/quantization/quant_primitives.py", line 330, in _quantize_affine
+    return _quantize_affine_no_dtype_cast(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torchao/quantization/quant_primitives.py", line 386, in _quantize_affine_no_dtype_cast
+    torch.round(input * (1.0 / scale)) + zero_point, quant_min, quant_max
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 44.52 GiB of which 6.98 GiB is free. Process 1825904 has 522.00 MiB memory in use. Process 1825833 has 526.00 MiB memory in use. Process 1825912 has 520.00 MiB memory in use. Process 1825920 has 526.00 MiB memory in use. Process 1825936 has 526.00 MiB memory in use. Process 1825928 has 516.00 MiB memory in use. Process 1825952 has 522.00 MiB memory in use. Process 1825944 has 524.00 MiB memory in use. Process 1827761 has 522.00 MiB memory in use. Process 1827832 has 522.00 MiB memory in use. Process 1827840 has 1.38 GiB memory in use. Process 1827848 has 522.00 MiB memory in use. Process 1827856 has 522.00 MiB memory in use. Process 1827864 has 516.00 MiB memory in use. Process 1827872 has 1.48 GiB memory in use. Process 1827880 has 522.00 MiB memory in use. Including non-PyTorch memory, this process has 27.47 GiB memory in use. Of the allocated memory 24.94 GiB is allocated by PyTorch, and 2.04 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

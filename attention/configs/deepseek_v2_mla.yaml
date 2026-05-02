@@ -1,0 +1,80 @@
+# DeepSeek-V2 — production-scale Multi-Head Latent Attention (MLA).
+#
+# 236B-total / 21B-active MoE. The MoE is in the FFN layers; attention is
+# dense and identical across experts, so for our single-attention-layer
+# benchmark MoE is irrelevant — we just extract layer 0's MLA block.
+#
+# Architecture (DeepSeek-V2 paper, arXiv:2405.04434):
+#   hidden_size           = 5120
+#   num_attention_heads   = 128       (head-rich design enabled by latent compression)
+#   q_lora_rank           = 1536      (Q-side latent dim — V2-Lite skips this)
+#   kv_lora_rank          = 512       (KV-side latent dim — the key bandwidth-saver)
+#   qk_nope_head_dim      = 128       (no-rope channel of QK)
+#   qk_rope_head_dim      = 64        (rope-only channel of QK)
+#   v_head_dim            = 128       (V head_dim — note: != qk_head_dim)
+#
+# Effective dims in the wrapper:
+#   q_head_dim   = qk_nope_head_dim + qk_rope_head_dim = 192   (QK head_dim)
+#   v_head_dim   = 128                                          (V head_dim)
+#
+# `head_dim: 192` below is the QK head_dim — set to satisfy the
+# AttentionConfig schema, which expects a single `head_dim` field. The
+# wrapper uses qk_nope_head_dim/qk_rope_head_dim/v_head_dim individually
+# and treats this `head_dim` field as informational.
+#
+# Single attention-layer footprint at BF16:
+#   q_a_proj:           5120 × 1536            × 2 ≈ 16 MB
+#   q_b_proj:           1536 × (128*192)       × 2 ≈ 75 MB
+#   kv_a_proj_with_mqa: 5120 × (512+64)        × 2 ≈ 6 MB
+#   kv_b_proj:          512  × (128*(128+128)) × 2 ≈ 34 MB    (covers both K_nope and V)
+#   o_proj:             (128*128) × 5120       × 2 ≈ 167 MB
+#   layernorms:         negligible
+#   Total:              ~300 MB BF16, ~150 MB INT8 — fits trivially in 48 GB.
+#
+# DeepSeek-V2 is gated on HF; request access at
+# https://huggingface.co/deepseek-ai/DeepSeek-V2 then
+# `huggingface-cli login`.
+#
+# Disk note: full sharded checkpoint is ~470 GB. extract_weights.py uses
+# `from_pretrained(..., low_cpu_mem_usage=True)` which keeps RAM bounded
+# but you'll need ~470 GB of free disk during the one-time extraction.
+name: deepseek_v2_mla
+hf_repo: deepseek-ai/DeepSeek-V2
+variant: MLA
+layer_index: 0
+hidden_size: 5120
+num_attention_heads: 128
+# By DeepSeek-V2 convention, num_key_value_heads == num_attention_heads;
+# the "compression" of MLA is in the latent dim, not the head count.
+num_key_value_heads: 128
+head_dim: 192                            # = qk_nope_head_dim + qk_rope_head_dim
+max_position_embeddings: 163840          # HF config value (with rope scaling for 128K context)
+rope_theta: 10000.0                      # base RoPE; un-scaled in our wrapper (fine — see below)
+# MLA-specific dims
+q_lora_rank: 1536
+kv_lora_rank: 512
+qk_nope_head_dim: 128
+qk_rope_head_dim: 64
+v_head_dim: 128
+weights_path: weights/deepseek_v2_mla_layer0.safetensors
+sweeps:
+  seq_lens: [128, 256, 512, 1024, 2048, 4096, 8192]
+  batches:  [1, 4, 16, 32]
+  # With SDPA + V-padding (FlashAttention backend, no S×S materialization),
+  # peak live activations are ~300 KB × B*S. At B*S=65536 that's ~20 GB
+  # live and ~30 GB total VRAM with allocator slack — comfortable on a
+  # 48 GB L40S. Translates to:
+  #   S=8192: B=1, 4, 8       (B=16, 32 skipped)
+  #   S=4096: B=1, 4, 16      (B=32 skipped)
+  #   S≤2048: full B sweep
+  # Earlier draft used 32768 because the wrapper had manual attention
+  # that materialized a 16 GB scores tensor at B=1 S=8192 — fixed in
+  # commit that switched to SDPA-with-V-padding.
+  max_bs_product: 65536
+warmup: 10
+iters:   50
+# RoPE-scaling note: Llama-3.1-style NTK scaling extends DeepSeek-V2's
+# context to 128K via rope_scaling in the HF config. Our RoPE encoder
+# does NOT apply the scaling — fine because:
+#   (a) our sweep stays at S ≤ 8192, well within the un-scaled regime,
+#   (b) we benchmark timing, not numerical equivalence to the HF model.

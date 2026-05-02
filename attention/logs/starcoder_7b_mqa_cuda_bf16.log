@@ -1,0 +1,30 @@
+[starcoder_7b_mqa|cuda|bf16] B=1 S=128  median=0.154 ms  throughput=833333.3 tok/s  59419 GFLOPs/s   16.4% util  AI=124.23 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=1 S=256  median=0.168 ms  throughput=1524390.3 tok/s  111891 GFLOPs/s   30.9% util  AI=241.75 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=1 S=512  median=0.220 ms  throughput=2325581.5 tok/s  180453 GFLOPs/s   49.8% util  AI=460.64 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=1 S=1024  median=0.419 ms  throughput=2444987.8 tok/s  210228 GFLOPs/s   58.1% util  AI=852.47 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=1 S=2048  median=0.899 ms  throughput=2277904.3 tok/s  234078 GFLOPs/s   64.7% util  AI=1532.09 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=1 S=4096  median=2.330 ms  throughput=1758241.7 tok/s  239675 GFLOPs/s   66.2% util  AI=2716.73 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=1 S=8192  median=6.784 ms  throughput=1207547.2 tok/s  245644 GFLOPs/s   67.9% util  AI=4874.99 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=4 S=128  median=0.212 ms  throughput=2415094.4 tok/s  172204 GFLOPs/s   47.6% util  AI=423.29 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=4 S=256  median=0.372 ms  throughput=2754820.9 tok/s  202205 GFLOPs/s   55.9% util  AI=727.72 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=4 S=512  median=0.763 ms  throughput=2684563.7 tok/s  208308 GFLOPs/s   57.5% util  AI=1156.89 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=4 S=1024  median=1.596 ms  throughput=2565747.3 tok/s  220611 GFLOPs/s   60.9% util  AI=1713.63 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=4 S=2048  median=4.230 ms  throughput=1936577.1 tok/s  199004 GFLOPs/s   55.0% util  AI=2462.63 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=4 S=4096  median=10.830 ms  throughput=1512859.2 tok/s  206225 GFLOPs/s   57.0% util  AI=3634.68 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=4 S=8192  median=27.820 ms  throughput=1177856.3 tok/s  239604 GFLOPs/s   66.2% util  AI=5747.73 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=16 S=128  median=0.708 ms  throughput=2894355.9 tok/s  206377 GFLOPs/s   57.0% util  AI=1063.08 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=16 S=256  median=1.489 ms  throughput=2751031.6 tok/s  201927 GFLOPs/s   55.8% util  AI=1462.86 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=16 S=512  median=3.843 ms  throughput=2131628.1 tok/s  165403 GFLOPs/s   45.7% util  AI=1859.53 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=16 S=1024  median=8.070 ms  throughput=2030199.3 tok/s  174563 GFLOPs/s   48.2% util  AI=2292.64 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=16 S=2048  median=16.036 ms  throughput=2043422.9 tok/s  209983 GFLOPs/s   58.0% util  AI=2903.49 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=16 S=4096  median=39.426 ms  throughput=1662251.3 tok/s  226590 GFLOPs/s   62.6% util  AI=3970.03 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=16 S=8192  median=184.330 ms  throughput=711071.6 tok/s  144649 GFLOPs/s   40.0% util  AI=6017.03 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=32 S=128  median=1.465 ms  throughput=2795248.2 tok/s  199310 GFLOPs/s   55.1% util  AI=1421.06 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=32 S=256  median=4.761 ms  throughput=1720800.3 tok/s  126307 GFLOPs/s   34.9% util  AI=1759.02 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=32 S=512  median=9.828 ms  throughput=1667014.0 tok/s  129351 GFLOPs/s   35.7% util  AI=2068.97 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=32 S=1024  median=16.158 ms  throughput=2028011.9 tok/s  174375 GFLOPs/s   48.2% util  AI=2429.45 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=32 S=2048  median=35.790 ms  throughput=1831134.9 tok/s  188168 GFLOPs/s   52.0% util  AI=2992.79 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=32 S=4096  median=80.911 ms  throughput=1619945.5 tok/s  220823 GFLOPs/s   61.0% util  AI=4032.03 FLOPs/byte
+[starcoder_7b_mqa|cuda|bf16] B=32 S=8192  median=238.562 ms  throughput=1098849.2 tok/s  223532 GFLOPs/s   61.7% util  AI=6064.39 FLOPs/byte
+
+Results written to /home/ngantaya/sid/attention-benchmarking/results/starcoder_7b_mqa_cuda_bf16.jsonl

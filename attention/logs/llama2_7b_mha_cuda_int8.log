@@ -1,0 +1,58 @@
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[power] pynvml not installed — GPU power/energy will be None. `pip install nvidia-ml-py` to enable.
+[llama2_7b_mha|cuda|int8] B=1 S=128  median=4.852 ms  throughput=26382.3 tok/s  3596 GFLOPs/s    0.5% util  AI=124.18 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=1 S=256  median=4.855 ms  throughput=52731.5 tok/s  7299 GFLOPs/s    1.0% util  AI=241.37 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=1 S=512  median=4.819 ms  throughput=106247.3 tok/s  15152 GFLOPs/s    2.1% util  AI=458.11 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=1 S=1024  median=4.857 ms  throughput=210837.0 tok/s  31835 GFLOPs/s    4.4% util  AI=837.82 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=1 S=2048  median=7.217 ms  throughput=283768.4 tok/s  47608 GFLOPs/s    6.6% util  AI=1462.86 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=1 S=4096  median=12.318 ms  throughput=332529.7 tok/s  66947 GFLOPs/s    9.2% util  AI=2457.60 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=1 S=8192  median=35.425 ms  throughput=231247.3 tok/s  62075 GFLOPs/s    8.6% util  AI=4096.00 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=4 S=128  median=6.697 ms  throughput=76452.6 tok/s  10422 GFLOPs/s    1.4% util  AI=437.89 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=4 S=256  median=6.905 ms  throughput=148301.9 tok/s  20527 GFLOPs/s    2.8% util  AI=768.00 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=4 S=512  median=8.630 ms  throughput=237304.2 tok/s  33841 GFLOPs/s    4.7% util  AI=1243.43 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=4 S=1024  median=13.778 ms  throughput=297287.3 tok/s  44889 GFLOPs/s    6.2% util  AI=1843.20 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=4 S=2048  median=31.988 ms  throughput=256098.3 tok/s  42966 GFLOPs/s    5.9% util  AI=2560.00 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=4 S=4096  median=55.761 ms  throughput=293826.0 tok/s  59155 GFLOPs/s    8.2% util  AI=3510.86 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=4 S=8192  median=89.201 ms  throughput=367351.6 tok/s  98610 GFLOPs/s   13.6% util  AI=5041.23 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=16 S=128  median=6.178 ms  throughput=331510.0 tok/s  45190 GFLOPs/s    6.2% util  AI=1188.57 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=16 S=256  median=9.447 ms  throughput=433557.3 tok/s  60010 GFLOPs/s    8.3% util  AI=1689.60 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=16 S=512  median=19.220 ms  throughput=426212.0 tok/s  60781 GFLOPs/s    8.4% util  AI=2176.00 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=16 S=1024  median=38.780 ms  throughput=422486.9 tok/s  63793 GFLOPs/s    8.8% util  AI=2633.14 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=16 S=2048  median=76.261 ms  throughput=429680.2 tok/s  72088 GFLOPs/s   10.0% util  AI=3150.77 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=16 S=4096  median=176.906 ms  throughput=370456.1 tok/s  74583 GFLOPs/s   10.3% util  AI=3932.16 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=16 S=8192  median=624.834 ms  throughput=209771.1 tok/s  56310 GFLOPs/s    7.8% util  AI=5349.88 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=32 S=128  median=9.329 ms  throughput=439076.4 tok/s  59853 GFLOPs/s    8.3% util  AI=1664.00 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=32 S=256  median=18.898 ms  throughput=433486.8 tok/s  60000 GFLOPs/s    8.3% util  AI=2112.00 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=32 S=512  median=80.339 ms  throughput=203936.0 tok/s  29083 GFLOPs/s    4.0% util  AI=2486.86 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=32 S=1024  median=95.653 ms  throughput=342572.1 tok/s  51727 GFLOPs/s    7.1% util  AI=2835.69 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=32 S=2048  median=357.197 ms  throughput=183473.1 tok/s  30782 GFLOPs/s    4.3% util  AI=3276.80 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=32 S=4096  median=709.646 ms  throughput=184700.4 tok/s  37185 GFLOPs/s    5.1% util  AI=4012.41 FLOPs/byte
+[llama2_7b_mha|cuda|int8] B=32 S=8192  median=1396.975 ms  throughput=187651.2 tok/s  50372 GFLOPs/s    7.0% util  AI=5405.03 FLOPs/byte
+
+Results written to /home/ngantaya/sid/attention-benchmarking/results/llama2_7b_mha_cuda_int8.jsonl

@@ -1,0 +1,30 @@
+[mistral_7b_gqa|cuda|int4] B=1 S=128  median=1.792 ms  throughput=71428.6 tok/s  6142 GFLOPs/s    0.8% util  AI=124.21 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=1 S=256  median=1.803 ms  throughput=141964.8 tok/s  12504 GFLOPs/s    1.7% util  AI=241.62 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=1 S=512  median=2.034 ms  throughput=251762.3 tok/s  23231 GFLOPs/s    3.2% util  AI=459.76 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=1 S=1024  median=2.542 ms  throughput=402900.9 tok/s  40557 GFLOPs/s    5.6% util  AI=847.45 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=1 S=2048  median=5.098 ms  throughput=401687.1 tok/s  47174 GFLOPs/s    6.5% util  AI=1509.05 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=1 S=4096  median=13.184 ms  throughput=310679.6 tok/s  46911 GFLOPs/s    6.5% util  AI=2633.14 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=1 S=8192  median=29.198 ms  throughput=280563.9 tok/s  61192 GFLOPs/s    8.5% util  AI=4630.26 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=4 S=128  median=2.037 ms  throughput=251382.6 tok/s  21615 GFLOPs/s    3.0% util  AI=428.41 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=4 S=256  median=2.568 ms  throughput=398724.1 tok/s  35120 GFLOPs/s    4.9% util  AI=741.52 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=4 S=512  median=5.061 ms  throughput=404694.5 tok/s  37343 GFLOPs/s    5.2% util  AI=1185.68 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=4 S=1024  median=12.700 ms  throughput=322528.6 tok/s  32467 GFLOPs/s    4.5% util  AI=1755.43 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=4 S=2048  median=27.379 ms  throughput=299210.8 tok/s  35139 GFLOPs/s    4.9% util  AI=2493.22 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=4 S=4096  median=55.526 ms  throughput=295066.8 tok/s  44554 GFLOPs/s    6.2% util  AI=3596.49 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=4 S=8192  median=114.050 ms  throughput=287312.5 tok/s  62664 GFLOPs/s    8.7% util  AI=5532.26 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=16 S=128  median=5.057 ms  throughput=405022.3 tok/s  34825 GFLOPs/s    4.8% util  AI=1104.84 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=16 S=256  median=12.573 ms  throughput=325786.0 tok/s  28695 GFLOPs/s    4.0% util  AI=1536.00 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=16 S=512  median=26.885 ms  throughput=304703.9 tok/s  28116 GFLOPs/s    3.9% util  AI=1958.96 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=16 S=1024  median=53.650 ms  throughput=305384.3 tok/s  30741 GFLOPs/s    4.2% util  AI=2397.66 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=16 S=2048  median=107.155 ms  throughput=305798.7 tok/s  35913 GFLOPs/s    5.0% util  AI=2978.91 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=16 S=4096  median=216.767 ms  throughput=302333.2 tok/s  45651 GFLOPs/s    6.3% util  AI=3958.55 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=16 S=8192  median=451.457 ms  throughput=290331.1 tok/s  63322 GFLOPs/s    8.7% util  AI=5815.48 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=32 S=128  median=12.574 ms  throughput=325759.4 tok/s  28010 GFLOPs/s    3.9% util  AI=1499.43 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=32 S=256  median=26.860 ms  throughput=304994.3 tok/s  26864 GFLOPs/s    3.7% util  AI=1869.91 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=32 S=512  median=53.353 ms  throughput=307084.0 tok/s  28336 GFLOPs/s    3.9% util  AI=2197.85 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=32 S=1024  median=105.845 ms  throughput=309585.5 tok/s  31164 GFLOPs/s    4.3% util  AI=2553.35 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=32 S=2048  median=211.911 ms  throughput=309262.4 tok/s  36320 GFLOPs/s    5.0% util  AI=3078.87 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=32 S=4096  median=431.573 ms  throughput=303707.6 tok/s  45858 GFLOPs/s    6.3% util  AI=4026.10 FLOPs/byte
+[mistral_7b_gqa|cuda|int4] B=32 S=8192  median=909.933 ms  throughput=288091.7 tok/s  62834 GFLOPs/s    8.7% util  AI=5865.53 FLOPs/byte
+
+Results written to /home/ngantaya/sid/attention-benchmarking/results/mistral_7b_gqa_cuda_int4.jsonl

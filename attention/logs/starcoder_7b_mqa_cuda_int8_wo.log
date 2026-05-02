@@ -1,0 +1,30 @@
+[starcoder_7b_mqa|cuda|int8_wo] B=1 S=128  median=0.315 ms  throughput=405844.2 tok/s  28938 GFLOPs/s    8.0% util  AI=124.23 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=1 S=256  median=0.321 ms  throughput=798722.1 tok/s  58626 GFLOPs/s   16.2% util  AI=241.75 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=1 S=512  median=0.319 ms  throughput=1602564.2 tok/s  124350 GFLOPs/s   34.4% util  AI=460.64 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=1 S=1024  median=0.628 ms  throughput=1631321.3 tok/s  140266 GFLOPs/s   38.7% util  AI=852.47 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=1 S=2048  median=1.316 ms  throughput=1556420.2 tok/s  159938 GFLOPs/s   44.2% util  AI=1532.09 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=1 S=4096  median=2.523 ms  throughput=1623376.7 tok/s  221290 GFLOPs/s   61.1% util  AI=2716.73 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=1 S=8192  median=7.211 ms  throughput=1136040.9 tok/s  231098 GFLOPs/s   63.8% util  AI=4874.99 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=4 S=128  median=0.325 ms  throughput=1577287.1 tok/s  112466 GFLOPs/s   31.1% util  AI=423.29 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=4 S=256  median=0.566 ms  throughput=1808318.2 tok/s  132731 GFLOPs/s   36.7% util  AI=727.72 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=4 S=512  median=0.963 ms  throughput=2127659.6 tok/s  165095 GFLOPs/s   45.6% util  AI=1156.89 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=4 S=1024  median=1.841 ms  throughput=2224694.2 tok/s  191286 GFLOPs/s   52.8% util  AI=1713.63 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=4 S=2048  median=5.137 ms  throughput=1594578.5 tok/s  163860 GFLOPs/s   45.3% util  AI=2462.63 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=4 S=4096  median=11.572 ms  throughput=1415804.0 tok/s  192995 GFLOPs/s   53.3% util  AI=3634.68 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=4 S=8192  median=30.157 ms  throughput=1086587.5 tok/s  221038 GFLOPs/s   61.1% util  AI=5747.73 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=16 S=128  median=0.932 ms  throughput=2197802.2 tok/s  156710 GFLOPs/s   43.3% util  AI=1063.08 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=16 S=256  median=1.701 ms  throughput=2408187.9 tok/s  176762 GFLOPs/s   48.8% util  AI=1462.86 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=16 S=512  median=4.002 ms  throughput=2047082.9 tok/s  158843 GFLOPs/s   43.9% util  AI=1859.53 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=16 S=1024  median=8.545 ms  throughput=1917315.7 tok/s  164857 GFLOPs/s   45.5% util  AI=2292.64 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=16 S=2048  median=17.918 ms  throughput=1828780.5 tok/s  187926 GFLOPs/s   51.9% util  AI=2903.49 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=16 S=4096  median=42.177 ms  throughput=1553850.6 tok/s  211813 GFLOPs/s   58.5% util  AI=3970.03 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=16 S=8192  median=201.557 ms  throughput=650297.5 tok/s  132286 GFLOPs/s   36.5% util  AI=6017.03 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=32 S=128  median=1.934 ms  throughput=2117522.6 tok/s  150986 GFLOPs/s   41.7% util  AI=1421.06 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=32 S=256  median=4.400 ms  throughput=1861764.1 tok/s  136654 GFLOPs/s   37.7% util  AI=1759.02 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=32 S=512  median=9.829 ms  throughput=1666840.3 tok/s  129338 GFLOPs/s   35.7% util  AI=2068.97 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=32 S=1024  median=20.454 ms  throughput=1602002.6 tok/s  137745 GFLOPs/s   38.1% util  AI=2429.45 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=32 S=2048  median=41.197 ms  throughput=1590813.0 tok/s  163473 GFLOPs/s   45.2% util  AI=2992.79 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=32 S=4096  median=87.256 ms  throughput=1502153.5 tok/s  204766 GFLOPs/s   56.6% util  AI=4032.03 FLOPs/byte
+[starcoder_7b_mqa|cuda|int8_wo] B=32 S=8192  median=259.193 ms  throughput=1011386.0 tok/s  205740 GFLOPs/s   56.8% util  AI=6064.39 FLOPs/byte
+
+Results written to /home/ngantaya/sid/attention-benchmarking/results/starcoder_7b_mqa_cuda_int8_wo.jsonl

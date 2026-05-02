@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/home/ngantaya/sid/attention-benchmarking/scripts/run_bench.py", line 330, in <module>
+    main()
+  File "/home/ngantaya/sid/attention-benchmarking/scripts/run_bench.py", line 218, in main
+    mod = build_module(cfg, args, dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ngantaya/sid/attention-benchmarking/scripts/run_bench.py", line 162, in build_module
+    mod.load_weights(cfg.weights_path)
+  File "/home/ngantaya/sid/attention-benchmarking/src/attention/llama_mha.py", line 55, in load_weights
+    sd = load_file(path)
+         ^^^^^^^^^^^^^^^
+  File "/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/safetensors/torch.py", line 336, in load_file
+    with safe_open(filename, framework="pt", device=device) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: No such file or directory: weights/llama3_70b_gqa_layer0.safetensors

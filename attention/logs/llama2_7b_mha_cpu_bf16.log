@@ -1,0 +1,58 @@
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[power] /sys/class/powercap/intel-rapl:0/energy_uj not readable — CPU power/energy will be None. (Some platforms require root for RAPL access.)
+[llama2_7b_mha|cpu|bf16] B=1 S=128  median=209.614 ms  throughput=610.6 tok/s  83 GFLOPs/s    2.9% util  AI=124.18 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=1 S=256  median=216.218 ms  throughput=1184.0 tok/s  164 GFLOPs/s    5.7% util  AI=241.37 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=1 S=512  median=232.451 ms  throughput=2202.6 tok/s  314 GFLOPs/s   10.8% util  AI=458.11 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=1 S=1024  median=270.641 ms  throughput=3783.6 tok/s  571 GFLOPs/s   19.7% util  AI=837.82 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=1 S=2048  median=499.046 ms  throughput=4103.8 tok/s  689 GFLOPs/s   23.7% util  AI=1462.86 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=1 S=4096  median=974.508 ms  throughput=4203.1 tok/s  846 GFLOPs/s   29.2% util  AI=2457.60 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=1 S=8192  median=1450.686 ms  throughput=5647.0 tok/s  1516 GFLOPs/s   52.3% util  AI=4096.00 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=4 S=128  median=12.888 ms  throughput=39726.3 tok/s  5415 GFLOPs/s  186.7% util  AI=437.89 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=4 S=256  median=27.786 ms  throughput=36853.1 tok/s  5101 GFLOPs/s  175.9% util  AI=768.00 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=4 S=512  median=84.648 ms  throughput=24194.3 tok/s  3450 GFLOPs/s  119.0% util  AI=1243.43 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=4 S=1024  median=177.391 ms  throughput=23090.2 tok/s  3487 GFLOPs/s  120.2% util  AI=1843.20 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=4 S=2048  median=397.416 ms  throughput=20613.2 tok/s  3458 GFLOPs/s  119.3% util  AI=2560.00 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=4 S=4096  median=848.648 ms  throughput=19306.0 tok/s  3887 GFLOPs/s  134.0% util  AI=3510.86 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=4 S=8192  median=4894.279 ms  throughput=6695.2 tok/s  1797 GFLOPs/s   62.0% util  AI=5041.23 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=16 S=128  median=291.860 ms  throughput=7017.1 tok/s  957 GFLOPs/s   33.0% util  AI=1188.57 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=16 S=256  median=165.148 ms  throughput=24802.1 tok/s  3433 GFLOPs/s  118.4% util  AI=1689.60 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=16 S=512  median=331.098 ms  throughput=24741.9 tok/s  3528 GFLOPs/s  121.7% util  AI=2176.00 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=16 S=1024  median=937.541 ms  throughput=17475.5 tok/s  2639 GFLOPs/s   91.0% util  AI=2633.14 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=16 S=2048  median=1462.985 ms  throughput=22398.0 tok/s  3758 GFLOPs/s  129.6% util  AI=3150.77 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=16 S=4096  median=4890.780 ms  throughput=13399.9 tok/s  2698 GFLOPs/s   93.0% util  AI=3932.16 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=16 S=8192  median=11408.014 ms  throughput=11489.5 tok/s  3084 GFLOPs/s  106.4% util  AI=5349.88 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=32 S=128  median=446.152 ms  throughput=9180.7 tok/s  1251 GFLOPs/s   43.2% util  AI=1664.00 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=32 S=256  median=664.197 ms  throughput=12333.7 tok/s  1707 GFLOPs/s   58.9% util  AI=2112.00 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=32 S=512  median=1136.861 ms  throughput=14411.6 tok/s  2055 GFLOPs/s   70.9% util  AI=2486.86 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=32 S=1024  median=2105.384 ms  throughput=15563.9 tok/s  2350 GFLOPs/s   81.0% util  AI=2835.69 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=32 S=2048  median=5081.206 ms  throughput=12897.7 tok/s  2164 GFLOPs/s   74.6% util  AI=3276.80 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=32 S=4096  median=9641.548 ms  throughput=13594.5 tok/s  2737 GFLOPs/s   94.4% util  AI=4012.41 FLOPs/byte
+[llama2_7b_mha|cpu|bf16] B=32 S=8192  median=20028.032 ms  throughput=13088.9 tok/s  3514 GFLOPs/s  121.2% util  AI=5405.03 FLOPs/byte
+
+Results written to /home/ngantaya/sid/attention-benchmarking/results/llama2_7b_mha_cpu_bf16.jsonl

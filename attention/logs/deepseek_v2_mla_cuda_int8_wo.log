@@ -1,0 +1,39 @@
+2026-04-25 22:29:43,563 - INFO - flashinfer.jit: Loading JIT ops: batch_prefill_with_kv_cache_dtype_q_bf16_dtype_kv_bf16_dtype_o_bf16_dtype_idx_i32_head_dim_qk_192_head_dim_vo_128_posenc_0_use_swa_False_use_logits_cap_False_f16qk_False
+/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torch/utils/cpp_extension.py:2059: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+/home/ngantaya/miniconda3/envs/attn-bench/lib/python3.12/site-packages/torch/utils/cpp_extension.py:2059: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+[run_bench] OVERWRITING existing /home/ngantaya/sid/attention-benchmarking/results/deepseek_v2_mla_cuda_int8_wo.jsonl (pass --append to keep prior rows)
+2026-04-25 22:29:43,638 - INFO - flashinfer.jit: Finished loading JIT ops: batch_prefill_with_kv_cache_dtype_q_bf16_dtype_kv_bf16_dtype_o_bf16_dtype_idx_i32_head_dim_qk_192_head_dim_vo_128_posenc_0_use_swa_False_use_logits_cap_False_f16qk_False
+[deepseek_v2_mla|cuda|int8_wo] B=1 S=128  median=1.725 ms  throughput=74184.0 tok/s  22918 GFLOPs/s    6.3% util  AI=123.59 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=1 S=256  median=1.542 ms  throughput=166002.7 tok/s  53025 GFLOPs/s   14.6% util  AI=239.47 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=1 S=512  median=2.128 ms  throughput=240616.0 tok/s  81904 GFLOPs/s   22.6% util  AI=453.27 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=1 S=1024  median=4.825 ms  throughput=212224.1 tok/s  81141 GFLOPs/s   22.4% util  AI=832.04 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=1 S=2048  median=12.107 ms  throughput=169161.8 tok/s  78867 GFLOPs/s   21.8% util  AI=1485.77 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=1 S=4096  median=30.056 ms  throughput=136276.9 tok/s  86399 GFLOPs/s   23.9% util  AI=2631.47 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=1 S=8192  median=66.146 ms  throughput=123846.7 tok/s  120074 GFLOPs/s   33.2% util  AI=4741.12 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=4 S=128  median=3.414 ms  throughput=149970.0 tok/s  46331 GFLOPs/s   12.8% util  AI=411.38 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=4 S=256  median=7.653 ms  throughput=133797.2 tok/s  42738 GFLOPs/s   11.8% util  AI=695.12 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=4 S=512  median=12.582 ms  throughput=162773.7 tok/s  55407 GFLOPs/s   15.3% util  AI=1084.78 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=4 S=1024  median=23.356 ms  throughput=175369.4 tok/s  67050 GFLOPs/s   18.5% util  AI=1586.93 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=4 S=2048  median=32.228 ms  throughput=254186.1 tok/s  118507 GFLOPs/s   32.7% util  AI=2279.86 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=4 S=4096  median=63.605 ms  throughput=257590.9 tok/s  163311 GFLOPs/s   45.1% util  AI=3403.45 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=4 S=8192  median=134.018 ms  throughput=244504.4 tok/s  237057 GFLOPs/s   65.5% util  AI=5472.31 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=16 S=128  median=6.244 ms  throughput=327976.4 tok/s  101324 GFLOPs/s   28.0% util  AI=984.53 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=16 S=256  median=12.027 ms  throughput=340570.4 tok/s  108786 GFLOPs/s   30.1% util  AI=1325.80 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=16 S=512  median=23.012 ms  throughput=355982.7 tok/s  121174 GFLOPs/s   33.5% util  AI=1664.55 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=16 S=1024  median=45.673 ms  throughput=358720.3 tok/s  137152 GFLOPs/s   37.9% util  AI=2052.49 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=16 S=2048  median=199.057 ms  throughput=164615.8 tok/s  76748 GFLOPs/s   21.2% util  AI=2631.47 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=16 S=4096  median=245.014 ms  throughput=267479.1 tok/s  169581 GFLOPs/s   46.8% util  AI=3672.82 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] SKIP B=16 S=8192 (B*S=131072 > max_bs_product=65536)
+[deepseek_v2_mla|cuda|int8_wo] B=32 S=128  median=11.782 ms  throughput=347644.7 tok/s  107400 GFLOPs/s   29.7% util  AI=1282.28 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=32 S=256  median=22.771 ms  throughput=359760.8 tok/s  114916 GFLOPs/s   31.7% util  AI=1562.00 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=32 S=512  median=86.880 ms  throughput=188581.3 tok/s  64192 GFLOPs/s   17.7% util  AI=1827.32 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=32 S=1024  median=164.142 ms  throughput=199631.9 tok/s  76327 GFLOPs/s   21.1% util  AI=2158.00 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] B=32 S=2048  median=200.751 ms  throughput=326454.0 tok/s  152200 GFLOPs/s   42.0% util  AI=2700.90 FLOPs/byte
+[deepseek_v2_mla|cuda|int8_wo] SKIP B=32 S=4096 (B*S=131072 > max_bs_product=65536)
+[deepseek_v2_mla|cuda|int8_wo] SKIP B=32 S=8192 (B*S=262144 > max_bs_product=65536)
+
+Results written to /home/ngantaya/sid/attention-benchmarking/results/deepseek_v2_mla_cuda_int8_wo.jsonl

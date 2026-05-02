@@ -1,0 +1,17 @@
+# configs/fpga_match_mha.yaml
+# Mirrors the verified cosim configuration of the Artix-7 INT8 attention
+# kernel (FPGA_Attention_Architecture deck, slide 02 + slide 09).
+name: llama2_7b_mha          # reuse the MHA module class in REGISTRY
+variant: MHA
+hidden_size: 64              # = num_attention_heads * head_dim = 1 * 64
+num_attention_heads: 1
+num_key_value_heads: 1
+head_dim: 64
+max_position_embeddings: 128
+rope_theta: 10000.0
+sweeps:
+  seq_lens: [128]
+  batches:  [1]
+  max_bs_product: 128
+warmup: 50                   # tiny kernel — pump warmup/iters way up
+iters:   500                 # so wall-clock noise doesn't dominate

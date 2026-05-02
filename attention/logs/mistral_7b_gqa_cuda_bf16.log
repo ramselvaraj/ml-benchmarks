@@ -1,0 +1,31 @@
+[run_bench] OVERWRITING existing /home/ngantaya/sid/attention-benchmarking/results/mistral_7b_gqa_cuda_bf16.jsonl (pass --append to keep prior rows)
+[mistral_7b_gqa|cuda|bf16] B=1 S=128  median=0.272 ms  throughput=469924.8 tok/s  40406 GFLOPs/s   11.2% util  AI=124.21 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=1 S=256  median=0.375 ms  throughput=683060.1 tok/s  60164 GFLOPs/s   16.6% util  AI=241.62 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=1 S=512  median=0.414 ms  throughput=1237623.8 tok/s  114201 GFLOPs/s   31.5% util  AI=459.76 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=1 S=1024  median=0.633 ms  throughput=1618123.0 tok/s  162886 GFLOPs/s   45.0% util  AI=847.45 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=1 S=2048  median=1.082 ms  throughput=1892147.6 tok/s  222215 GFLOPs/s   61.4% util  AI=1509.05 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=1 S=4096  median=2.648 ms  throughput=1546790.5 tok/s  233558 GFLOPs/s   64.5% util  AI=2633.14 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=1 S=8192  median=7.070 ms  throughput=1158748.6 tok/s  252727 GFLOPs/s   69.8% util  AI=4630.26 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=4 S=128  median=0.411 ms  throughput=1246882.8 tok/s  107211 GFLOPs/s   29.6% util  AI=428.41 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=4 S=256  median=0.558 ms  throughput=1834862.3 tok/s  161615 GFLOPs/s   44.6% util  AI=741.52 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=4 S=512  median=0.998 ms  throughput=2051282.1 tok/s  189281 GFLOPs/s   52.3% util  AI=1185.68 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=4 S=1024  median=2.169 ms  throughput=1888574.1 tok/s  190110 GFLOPs/s   52.5% util  AI=1755.43 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=4 S=2048  median=5.009 ms  throughput=1635323.0 tok/s  192053 GFLOPs/s   53.1% util  AI=2493.22 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=4 S=4096  median=19.797 ms  throughput=827600.5 tok/s  124963 GFLOPs/s   34.5% util  AI=3596.49 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=4 S=8192  median=57.277 ms  throughput=572092.6 tok/s  124776 GFLOPs/s   34.5% util  AI=5532.26 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=16 S=128  median=0.964 ms  throughput=2125398.5 tok/s  182749 GFLOPs/s   50.5% util  AI=1104.84 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=16 S=256  median=3.886 ms  throughput=1054018.4 tok/s  92838 GFLOPs/s   25.6% util  AI=1536.00 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=16 S=512  median=9.860 ms  throughput=830823.6 tok/s  76664 GFLOPs/s   21.2% util  AI=1958.96 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=16 S=1024  median=19.252 ms  throughput=851018.6 tok/s  85666 GFLOPs/s   23.7% util  AI=2397.66 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=16 S=2048  median=36.611 ms  throughput=895029.8 tok/s  105113 GFLOPs/s   29.0% util  AI=2978.91 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=16 S=4096  median=57.932 ms  throughput=1131261.7 tok/s  170815 GFLOPs/s   47.2% util  AI=3958.55 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=16 S=8192  median=125.914 ms  throughput=1040963.6 tok/s  227038 GFLOPs/s   62.7% util  AI=5815.48 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=32 S=128  median=1.967 ms  throughput=2082248.9 tok/s  179038 GFLOPs/s   49.5% util  AI=1499.43 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=32 S=256  median=4.589 ms  throughput=1785315.8 tok/s  157251 GFLOPs/s   43.4% util  AI=1869.91 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=32 S=512  median=9.332 ms  throughput=1755733.6 tok/s  162010 GFLOPs/s   44.8% util  AI=2197.85 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=32 S=1024  median=19.774 ms  throughput=1657086.7 tok/s  166808 GFLOPs/s   46.1% util  AI=2553.35 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=32 S=2048  median=42.696 ms  throughput=1534956.3 tok/s  180266 GFLOPs/s   49.8% util  AI=3078.87 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=32 S=4096  median=182.790 ms  throughput=717062.7 tok/s  108273 GFLOPs/s   29.9% util  AI=4026.10 FLOPs/byte
+[mistral_7b_gqa|cuda|bf16] B=32 S=8192  median=270.413 ms  throughput=969421.5 tok/s  211435 GFLOPs/s   58.4% util  AI=5865.53 FLOPs/byte
+
+Results written to /home/ngantaya/sid/attention-benchmarking/results/mistral_7b_gqa_cuda_bf16.jsonl

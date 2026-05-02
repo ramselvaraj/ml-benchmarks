@@ -1,0 +1,31 @@
+[run_bench] OVERWRITING existing /home/ngantaya/sid/attention-benchmarking/results/llama2_7b_mha_cuda_int8_wo.jsonl (pass --append to keep prior rows)
+[llama2_7b_mha|cuda|int8_wo] B=1 S=128  median=0.487 ms  throughput=262605.0 tok/s  35797 GFLOPs/s    9.9% util  AI=124.18 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=1 S=256  median=0.557 ms  throughput=459558.8 tok/s  63608 GFLOPs/s   17.6% util  AI=241.37 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=1 S=512  median=0.738 ms  throughput=693481.3 tok/s  98895 GFLOPs/s   27.3% util  AI=458.11 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=1 S=1024  median=1.069 ms  throughput=957854.4 tok/s  144631 GFLOPs/s   40.0% util  AI=837.82 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=1 S=2048  median=1.908 ms  throughput=1073537.3 tok/s  180110 GFLOPs/s   49.8% util  AI=1462.86 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=1 S=4096  median=4.069 ms  throughput=1006542.5 tok/s  202644 GFLOPs/s   56.0% util  AI=2457.60 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=1 S=8192  median=10.359 ms  throughput=790826.4 tok/s  212286 GFLOPs/s   58.6% util  AI=4096.00 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=4 S=128  median=0.767 ms  throughput=667556.7 tok/s  90998 GFLOPs/s   25.1% util  AI=437.89 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=4 S=256  median=1.065 ms  throughput=961538.5 tok/s  133088 GFLOPs/s   36.8% util  AI=768.00 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=4 S=512  median=1.834 ms  throughput=1116694.6 tok/s  159248 GFLOPs/s   44.0% util  AI=1243.43 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=4 S=1024  median=3.588 ms  throughput=1141552.5 tok/s  172369 GFLOPs/s   47.6% util  AI=1843.20 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=4 S=2048  median=8.430 ms  throughput=971817.3 tok/s  163044 GFLOPs/s   45.0% util  AI=2560.00 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=4 S=4096  median=17.791 ms  throughput=920916.3 tok/s  185405 GFLOPs/s   51.2% util  AI=3510.86 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=4 S=8192  median=40.078 ms  throughput=817598.8 tok/s  219473 GFLOPs/s   60.6% util  AI=5041.23 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=16 S=128  median=1.812 ms  throughput=1129943.5 tok/s  154028 GFLOPs/s   42.5% util  AI=1188.57 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=16 S=256  median=3.501 ms  throughput=1169932.7 tok/s  161933 GFLOPs/s   44.7% util  AI=1689.60 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=16 S=512  median=8.069 ms  throughput=1015228.4 tok/s  144778 GFLOPs/s   40.0% util  AI=2176.00 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=16 S=1024  median=15.845 ms  throughput=1033992.5 tok/s  156128 GFLOPs/s   43.1% util  AI=2633.14 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=16 S=2048  median=32.532 ms  throughput=1007239.6 tok/s  168987 GFLOPs/s   46.7% util  AI=3150.77 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=16 S=4096  median=71.088 ms  throughput=921898.0 tok/s  185603 GFLOPs/s   51.3% util  AI=3932.16 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=16 S=8192  median=171.079 ms  throughput=766150.5 tok/s  205662 GFLOPs/s   56.8% util  AI=5349.88 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=32 S=128  median=3.516 ms  throughput=1164822.3 tok/s  158783 GFLOPs/s   43.9% util  AI=1664.00 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=32 S=256  median=8.120 ms  throughput=1008827.2 tok/s  139634 GFLOPs/s   38.6% util  AI=2112.00 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=32 S=512  median=15.849 ms  throughput=1033725.3 tok/s  147416 GFLOPs/s   40.7% util  AI=2486.86 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=32 S=1024  median=31.297 ms  throughput=1047017.6 tok/s  158094 GFLOPs/s   43.7% util  AI=2835.69 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=32 S=2048  median=65.533 ms  throughput=1000046.9 tok/s  167780 GFLOPs/s   46.3% util  AI=3276.80 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=32 S=4096  median=148.970 ms  throughput=879852.1 tok/s  177138 GFLOPs/s   48.9% util  AI=4012.41 FLOPs/byte
+[llama2_7b_mha|cuda|int8_wo] B=32 S=8192  median=351.033 ms  throughput=746778.0 tok/s  200462 GFLOPs/s   55.4% util  AI=5405.03 FLOPs/byte
+
+Results written to /home/ngantaya/sid/attention-benchmarking/results/llama2_7b_mha_cuda_int8_wo.jsonl
