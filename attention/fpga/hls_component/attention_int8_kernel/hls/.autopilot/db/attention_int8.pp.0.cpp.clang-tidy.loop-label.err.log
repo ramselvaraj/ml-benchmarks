@@ -1,5 +1,0 @@
-26 errors generated.
-Error while processing /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp.
-clang-tidy applied 174 of 174 suggested fixes.
-Suppressed 45 warnings (45 in non-user code).
-Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

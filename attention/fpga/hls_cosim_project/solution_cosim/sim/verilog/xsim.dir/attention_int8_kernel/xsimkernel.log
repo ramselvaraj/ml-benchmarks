@@ -1,7 +1,0 @@
-Running: xsim.dir/attention_int8_kernel/xsimk -simmode gui -wdb attention_int8_kernel.wdb -simrunnum 0 -socket 47595
-Design successfully loaded
-Design Loading Memory Usage: 106124 KB (Peak: 106124 KB)
-Design Loading CPU Usage: 240 ms
-Simulation completed
-Simulation Memory Usage: 189076 KB (Peak: 239248 KB)
-Simulation CPU Usage: 1920530 ms

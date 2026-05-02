@@ -1,3 +1,0 @@
-relativeroot=/home/siyenga7/FPGA/hls_component
-original_argv=--mode hls --csim --config /home/siyenga7/FPGA/hls_component/hls_config.cfg --work_dir attention_int8_kernel 
-
