@@ -1,0 +1,19 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb_attention_int8.cpp in debug mode
+   Compiling ../../../../attention_int8.cpp in debug mode
+   Generating csim.exe
+[tb] dir            = /home/siyenga7/FPGA/testvectors/int8
+[tb] q_scale        = 1.11054e-05
+[tb] v_scale        = 0.00840769
+[tb] NUM_Q_HEADS    = 1
+[tb] NUM_KV_HEADS   = 1 (= NUM_Q_HEADS / Q_PER_KV)
+[tb] SEQ_LEN        = 128
+[tb] HEAD_DIM       = 64
+[tb] BQ x BK        = 8 x 128
+[tb] N_Q elems      = 8192
+[tb] max abs diff   = 4.2725e-03  (atol = 5.0000e-02)
+[tb] mismatches     = 0 / 8192  (0.000%)
+TEST PASS
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

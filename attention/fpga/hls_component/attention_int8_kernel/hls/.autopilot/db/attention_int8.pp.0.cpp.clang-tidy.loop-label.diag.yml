@@ -1,0 +1,1700 @@
+---
+MainSourceFile:  /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1207_1:  '
+    FileOffset:      1207
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_base.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          55755
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1207_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          283331
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          283795
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          284260
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          567857
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_127_1:  '
+    FileOffset:      127
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1473473
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_127_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_143_1:  '
+    FileOffset:      143
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1473920
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_143_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_169_1:  '
+    FileOffset:      169
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1474447
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_169_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_170_1:  '
+    FileOffset:      170
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1474776
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_170_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_198_1:  '
+    FileOffset:      198
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1475602
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_198_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_199_1:  '
+    FileOffset:      199
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1475969
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_199_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_200_1:  '
+    FileOffset:      200
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1476336
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_200_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_201_1:  '
+    FileOffset:      201
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1476703
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_201_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_202_1:  '
+    FileOffset:      202
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1477070
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_202_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_203_1:  '
+    FileOffset:      203
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1477437
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_203_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_204_1:  '
+    FileOffset:      204
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1477804
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_204_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_205_1:  '
+    FileOffset:      205
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1478171
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_205_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_206_1:  '
+    FileOffset:      206
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1478539
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_206_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_207_1:  '
+    FileOffset:      207
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1478908
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_207_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_222_1:  '
+    FileOffset:      222
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1479347
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_222_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_223_1:  '
+    FileOffset:      223
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1479695
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_223_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_224_1:  '
+    FileOffset:      224
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1480042
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_224_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_225_1:  '
+    FileOffset:      225
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1480388
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_225_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_226_1:  '
+    FileOffset:      226
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1480735
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_226_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_256_1:  '
+    FileOffset:      256
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1481209
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_256_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_257_1:  '
+    FileOffset:      257
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1481644
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_257_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_258_1:  '
+    FileOffset:      258
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1482081
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_258_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_259_1:  '
+    FileOffset:      259
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1482518
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_259_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_260_1:  '
+    FileOffset:      260
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1482955
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_260_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_261_1:  '
+    FileOffset:      261
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1483391
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_261_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      91
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      92
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      93
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      94
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      95
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      125
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      126
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      127
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      128
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      129
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      130
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      131
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      132
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      133
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      134
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      184
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      185
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      186
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      213
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      214
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      215
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      216
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      217
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      218
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      254
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      255
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_61_1:  '
+    FileOffset:      61
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1708606
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_61_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_117_1:  '
+    FileOffset:      117
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1709430
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_117_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_289_1:  '
+    FileOffset:      289
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1712087
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_289_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_449_1:  '
+    FileOffset:      449
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1714820
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_449_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_629_1:  '
+    FileOffset:      629
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1717981
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_629_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_633_2:  '
+    FileOffset:      633
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1718062
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_633_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_743_1:  '
+    FileOffset:      743
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1720371
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_743_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_840_1:  '
+    FileOffset:      840
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1721875
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_840_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_859_2:  '
+    FileOffset:      859
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1722105
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_859_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1173_1:  '
+    FileOffset:      1173
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1728307
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1173_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1256_1:  '
+    FileOffset:      1256
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1729910
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1256_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_68_1:  '
+    FileOffset:      68
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1737787
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_68_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_74_2:  '
+    FileOffset:      74
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1737937
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_74_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_78_3:  '
+    FileOffset:      78
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1738034
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_78_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_145_4:  '
+    FileOffset:      145
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1739904
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_145_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_151_5:  '
+    FileOffset:      151
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1740054
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_151_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_155_6:  '
+    FileOffset:      155
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1740151
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_155_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_170_7:  '
+    FileOffset:      170
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1740532
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_170_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_178_8:  '
+    FileOffset:      178
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1740763
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_178_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_243_9:  '
+    FileOffset:      243
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1744210
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_243_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_249_10:  '
+    FileOffset:      249
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1744362
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_249_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_253_11:  '
+    FileOffset:      253
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1744462
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_253_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_268_12:  '
+    FileOffset:      268
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1744844
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_268_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_276_13:  '
+    FileOffset:      276
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1745082
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_276_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_505_14:  '
+    FileOffset:      505
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1760637
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_505_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_511_15:  '
+    FileOffset:      511
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1760789
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_511_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_515_16:  '
+    FileOffset:      515
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1760888
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_515_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_525_17:  '
+    FileOffset:      525
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1761065
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_525_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_529_18:  '
+    FileOffset:      529
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1761163
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_529_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_539_19:  '
+    FileOffset:      539
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1761448
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_539_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_547_20:  '
+    FileOffset:      547
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1761703
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_547_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_908_21:  '
+    FileOffset:      908
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1793942
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_908_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_914_22:  '
+    FileOffset:      914
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1794094
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_914_22: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_918_23:  '
+    FileOffset:      918
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1794194
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_918_23: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1034_1:  '
+    FileOffset:      1034
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1796870
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1034_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1040_2:  '
+    FileOffset:      1040
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1797020
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1040_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1044_3:  '
+    FileOffset:      1044
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1797118
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1044_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1131_4:  '
+    FileOffset:      1131
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1800588
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1131_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1137_5:  '
+    FileOffset:      1137
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1800739
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1137_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1141_6:  '
+    FileOffset:      1141
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1800838
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1141_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1160_7:  '
+    FileOffset:      1160
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1801318
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1160_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1167_8:  '
+    FileOffset:      1167
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1801560
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1167_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1283_9:  '
+    FileOffset:      1283
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1807132
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1283_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1289_10:  '
+    FileOffset:      1289
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1807284
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1289_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1293_11:  '
+    FileOffset:      1293
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1807383
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1293_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1313_12:  '
+    FileOffset:      1313
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1807892
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1313_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1320_13:  '
+    FileOffset:      1320
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1808141
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1320_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1582_14:  '
+    FileOffset:      1582
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1825498
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1582_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1588_15:  '
+    FileOffset:      1588
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1825650
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1588_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1592_16:  '
+    FileOffset:      1592
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1825750
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1592_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1616_17:  '
+    FileOffset:      1616
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1826224
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1616_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1623_18:  '
+    FileOffset:      1623
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1826491
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1623_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2053_19:  '
+    FileOffset:      2053
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1865062
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2053_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2059_20:  '
+    FileOffset:      2059
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1865214
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2059_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2063_21:  '
+    FileOffset:      2063
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1865314
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2063_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2193_1:  '
+    FileOffset:      2193
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1867934
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2193_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2200_2:  '
+    FileOffset:      2200
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1868097
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2200_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2204_3:  '
+    FileOffset:      2204
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1868189
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2204_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2251_4:  '
+    FileOffset:      2251
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1869798
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2251_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2258_5:  '
+    FileOffset:      2258
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1869960
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2258_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2262_6:  '
+    FileOffset:      2262
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1870052
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2262_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2280_7:  '
+    FileOffset:      2280
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1870425
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2280_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2335_8:  '
+    FileOffset:      2335
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1872891
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2335_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2342_9:  '
+    FileOffset:      2342
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1873058
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2342_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2346_10:  '
+    FileOffset:      2346
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1873151
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2346_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2364_11:  '
+    FileOffset:      2364
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1873532
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2364_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2453_12:  '
+    FileOffset:      2453
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1878973
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2453_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2460_13:  '
+    FileOffset:      2460
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1879141
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2460_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2464_14:  '
+    FileOffset:      2464
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1879235
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2464_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2474_15:  '
+    FileOffset:      2474
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1879406
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2474_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2478_16:  '
+    FileOffset:      2478
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1879497
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2478_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2489_17:  '
+    FileOffset:      2489
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1879779
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2489_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2497_18:  '
+    FileOffset:      2497
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1879966
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2497_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2822_19:  '
+    FileOffset:      2822
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1914436
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2822_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2829_20:  '
+    FileOffset:      2829
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1914604
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2829_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2833_21:  '
+    FileOffset:      2833
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1914698
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2833_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2921_1:  '
+    FileOffset:      2921
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1916500
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2921_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2928_2:  '
+    FileOffset:      2928
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1916608
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2928_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2932_3:  '
+    FileOffset:      2932
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1916679
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2932_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2947_4:  '
+    FileOffset:      2947
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1916967
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2947_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2979_5:  '
+    FileOffset:      2979
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1918181
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2979_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2986_6:  '
+    FileOffset:      2986
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1918292
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2986_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2990_7:  '
+    FileOffset:      2990
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1918365
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2990_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3005_8:  '
+    FileOffset:      3005
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1918660
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3005_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3055_9:  '
+    FileOffset:      3055
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1921993
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3055_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3062_10:  '
+    FileOffset:      3062
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1922104
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3062_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3066_11:  '
+    FileOffset:      3066
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1922177
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3066_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3081_12:  '
+    FileOffset:      3081
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1922473
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3081_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3218_13:  '
+    FileOffset:      3218
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1941785
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3218_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3225_14:  '
+    FileOffset:      3225
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1941899
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3225_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3229_15:  '
+    FileOffset:      3229
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1941974
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3229_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3244_16:  '
+    FileOffset:      3244
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1942261
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3244_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3404_17:  '
+    FileOffset:      3404
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1967871
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3404_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3411_18:  '
+    FileOffset:      3411
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1967985
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3411_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3415_19:  '
+    FileOffset:      3415
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          1968062
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3415_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_703_1:  '
+    FileOffset:      703
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2002169
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_703_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_921_1:  '
+    FileOffset:      921
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2010558
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_921_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1345_1:  '
+    FileOffset:      1345
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2029541
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1345_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_240_1:  '
+    FileOffset:      240
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2044445
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_240_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_268_2:  '
+    FileOffset:      268
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2044966
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_268_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_48_1:  '
+    FileOffset:      48
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2060967
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_48_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_109_2:  '
+    FileOffset:      109
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2062127
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_109_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_123_3:  '
+    FileOffset:      123
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2062436
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_123_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_153_4:  '
+    FileOffset:      153
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2062946
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_153_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_281_1:  '
+    FileOffset:      281
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2064880
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_281_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_301_2:  '
+    FileOffset:      301
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2065245
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_301_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_315_3:  '
+    FileOffset:      315
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2065553
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_315_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_433_1:  '
+    FileOffset:      433
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2067391
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_433_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_447_2:  '
+    FileOffset:      447
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2067716
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_447_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_33_1:  '
+    FileOffset:      33
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_diff_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2070417
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_33_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_183_1:  '
+    FileOffset:      183
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_diff_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2073339
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_183_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_248_1:  '
+    FileOffset:      248
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_diff_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2074636
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_16_1:  '
+    FileOffset:      16
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2085698
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_16_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_27_1:  '
+    FileOffset:      27
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2085873
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_27_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_38_1:  '
+    FileOffset:      38
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2086034
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_38_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_49_1:  '
+    FileOffset:      49
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2086196
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_49_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_60_1:  '
+    FileOffset:      60
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2086370
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_60_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_71_1:  '
+    FileOffset:      71
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2086545
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_71_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_82_1:  '
+    FileOffset:      82
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2086706
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_82_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_93_1:  '
+    FileOffset:      93
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2086868
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_93_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_26_1:  '
+    FileOffset:      26
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_mad_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2158078
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_26_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_40_1:  '
+    FileOffset:      40
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_cbrt_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2159851
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_40_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_49_1:  '
+    FileOffset:      49
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hypot_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2164436
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_49_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_81_2:  '
+    FileOffset:      81
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hypot_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2165177
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_81_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_169_3:  '
+    FileOffset:      169
+    FilePath:        /packages/apps/fpga/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hypot_apfixed.h
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2166872
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_169_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_81_1:  '
+    FileOffset:      81
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2221792
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_81_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_89_2:  '
+    FileOffset:      89
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2222116
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_89_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_101_3:  '
+    FileOffset:      101
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2222536
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_101_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_102_4:  '
+    FileOffset:      102
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2222583
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_102_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_108_5:  '
+    FileOffset:      108
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2222736
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_108_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_112_6:  '
+    FileOffset:      112
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2222868
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_112_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_118_7:  '
+    FileOffset:      118
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2223000
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_118_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_130_8:  '
+    FileOffset:      130
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2223304
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_130_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_131_9:  '
+    FileOffset:      131
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2223355
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_131_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_144_10:  '
+    FileOffset:      144
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2223768
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_144_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_146_11:  '
+    FileOffset:      146
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2223862
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_146_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_149_12:  '
+    FileOffset:      149
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2223959
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_149_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_161_13:  '
+    FileOffset:      161
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2224397
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_161_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_168_14:  '
+    FileOffset:      168
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2224690
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_168_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_174_15:  '
+    FileOffset:      174
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2224875
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_174_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_180_16:  '
+    FileOffset:      180
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2225055
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_180_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_183_17:  '
+    FileOffset:      183
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2225160
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_183_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_193_18:  '
+    FileOffset:      193
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2225475
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_193_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_195_19:  '
+    FileOffset:      195
+    FilePath:        /home/siyenga7/FPGA/attention_int8.cpp
+    Replacements:    
+      - FilePath:        /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/.autopilot/db/attention_int8.pp.0.cpp
+        Offset:          2225608
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_195_19: '
+...

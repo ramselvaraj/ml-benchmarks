@@ -1,0 +1,12 @@
+{
+  "name": "hls_component",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "attention_int8_kernel"
+  },
+  "previousBuildStatusMap": {}
+}

@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 577,
+    "calls": "",
+    "file": "attention_int8.cpp",
+    "fileloc": 57,
+    "instructions": 7950,
+    "loads": {
+      "L": 792
+    },
+    "name": "attention_int8_kernel",
+    "stores": {
+      "L": 408
+    },
+    "total_instructions": 7950
+  }
+}

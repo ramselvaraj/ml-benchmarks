@@ -1,0 +1,4 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /home/siyenga7/FPGA/hls_component/attention_int8_kernel/attention_int8_kernel.hlsrun_csim_summary, at Sat Apr 25 19:13:58 2026
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir /home/siyenga7/FPGA/hls_component/attention_int8_kernel -config /home/siyenga7/FPGA/hls_component/hls_config.cfg -cmdlineconfig /home/siyenga7/FPGA/hls_component/attention_int8_kernel/hls/config.cmdline
+ERROR: [vitis-run 82-3504] Exception when launching command 'vitis_hls': ERROR: [vitis-run 17-70] Application Exception: Not found in path: vitis_hls
+

@@ -1,0 +1,1428 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 170, 
+                   Column: 13 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fast_expf(float)'
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 30, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 163, 
+                   Column: 47 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fast_expf(float)'
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 30, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 112, 
+                   Column: 35 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_112_6
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 149, 
+                   Column: 44 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_149_12
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 183, 
+                   Column: 44 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_183_17
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                   Column: 0 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_112_6
+  - String:          ''' ('
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:112:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          attention_int8_kernel
+  - String:          ''' completely with a factor of '
+  - Factor:          '128'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                   Column: 0 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_149_12
+  - String:          ''' ('
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:149:44'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          attention_int8_kernel
+  - String:          ''' completely with a factor of '
+  - Factor:          '128'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                   Column: 0 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_174_15
+  - String:          ''' ('
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:174:40'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          attention_int8_kernel
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                   Column: 0 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_183_17
+  - String:          ''' ('
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:183:44'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          attention_int8_kernel
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::mantissa() const'
+    DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 340, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 316, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::__signbit() const'
+    DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 349, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 116, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IifET_T0_b
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, float>(float, bool)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 116, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                   Line: 51, Column: 0 }
+Function:        __hls_fptosi_float_i32
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'int generic_cast_IEEE754<int, float>(float, bool)'
+    DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 116, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          __hls_fptosi_float_i32
+    DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                       Line: 51, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                   Column: 0 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          __hls_fptosi_float_i32
+    DebugLoc:        { File: /wrk/ci/prod/2023.2/hls_product/continuous/689/2023.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                       Line: 51, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 37, 
+                   Column: 0 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZL9fast_expffE3lut
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 91, 
+                   Column: 17 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          Q_tile
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 92, 
+                   Column: 19 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          O_tile
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 93, 
+                   Column: 19 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          m_state
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 94, 
+                   Column: 19 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          l_state
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 121, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          K_tile
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          V_tile
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 138, 
+                   Column: 23 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          scores
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 139, 
+                   Column: 23 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          row_max
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 165, 
+                   Column: 27 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          P_row
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 81, 
+                   Column: 19 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '4194304'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        Q_in2983seq
+  - ArrayName:       Q_in
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_81_1
+  - String:          ' '
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:81:19'
+  - String:          ' '
+  - Function:        attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 104, 
+                       Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.264
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 130, 
+                   Column: 20 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '8192'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       K_in
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_130_8
+  - String:          ' '
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:130:20'
+  - String:          ' '
+  - Function:        attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 133, 
+                       Column: 15 }
+  - OrigDirection:   read
+  - OrigID:          for.inc92.load.274
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 130, 
+                   Column: 20 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '8192'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep2986seq
+  - ArrayName:       V_in
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_130_8
+  - String:          ' '
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:130:20'
+  - String:          ' '
+  - Function:        attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 134, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          arrayidx8211.exit.load.10
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 81, 
+                   Column: 19 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '4194304'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        O_out2987seq
+  - ArrayName:       O_out
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_81_1
+  - String:          ' '
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:81:19'
+  - String:          ' '
+  - Function:        attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 200, 
+                       Column: 49 }
+  - OrigDirection:   write
+  - OrigID:          for.inc275.store.30
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 118, 
+                   Column: 31 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_118_7
+  - String:          ' '
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:118:31'
+  - String:          ' '
+  - Function:        attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 81, 
+                   Column: 19 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i16
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 81, 
+                       Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          O_out2987seq
+  - ArrayName:       O_out
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_195_19
+  - String:          ' '
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:195:36'
+  - String:          ' '
+  - Function:        attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 130, 
+                   Column: 20 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 130, 
+                       Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          scevgep2986seq
+  - ArrayName:       V_in
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_131_9
+  - String:          ' '
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:131:39'
+  - String:          ' '
+  - Function:        attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 130, 
+                   Column: 20 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 130, 
+                       Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       K_in
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_131_9
+  - String:          ' '
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:131:39'
+  - String:          ' '
+  - Function:        attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 81, 
+                   Column: 19 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 81, 
+                       Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          Q_in2983seq
+  - ArrayName:       Q_in
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_102_4
+  - String:          ' '
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:102:35'
+  - String:          ' '
+  - Function:        attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=V_tile_0'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  attention_int8_kernel
+  - String:          ' '
+  - varLoc:          '/home/siyenga7/FPGA/attention_int8.cpp:122:21'
+  - String:          ' '
+  - PragmaSrcLoc:    '/home/siyenga7/FPGA/attention_int8.cpp:181:9'
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                       Column: 9 }
+  - VarName:         V_tile_0
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                   Column: 9 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            V_tile_0
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=V_tile_1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  attention_int8_kernel
+  - String:          ' '
+  - varLoc:          '/home/siyenga7/FPGA/attention_int8.cpp:122:21'
+  - String:          ' '
+  - PragmaSrcLoc:    '/home/siyenga7/FPGA/attention_int8.cpp:181:9'
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                       Column: 9 }
+  - VarName:         V_tile_1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                   Column: 9 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            V_tile_1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=V_tile_2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  attention_int8_kernel
+  - String:          ' '
+  - varLoc:          '/home/siyenga7/FPGA/attention_int8.cpp:122:21'
+  - String:          ' '
+  - PragmaSrcLoc:    '/home/siyenga7/FPGA/attention_int8.cpp:181:9'
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                       Column: 9 }
+  - VarName:         V_tile_2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                   Column: 9 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            V_tile_2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=V_tile_3'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  attention_int8_kernel
+  - String:          ' '
+  - varLoc:          '/home/siyenga7/FPGA/attention_int8.cpp:122:21'
+  - String:          ' '
+  - PragmaSrcLoc:    '/home/siyenga7/FPGA/attention_int8.cpp:181:9'
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                       Column: 9 }
+  - VarName:         V_tile_3
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                   Column: 9 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            V_tile_3
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=V_tile_4'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  attention_int8_kernel
+  - String:          ' '
+  - varLoc:          '/home/siyenga7/FPGA/attention_int8.cpp:122:21'
+  - String:          ' '
+  - PragmaSrcLoc:    '/home/siyenga7/FPGA/attention_int8.cpp:181:9'
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                       Column: 9 }
+  - VarName:         V_tile_4
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                   Column: 9 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            V_tile_4
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=V_tile_5'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  attention_int8_kernel
+  - String:          ' '
+  - varLoc:          '/home/siyenga7/FPGA/attention_int8.cpp:122:21'
+  - String:          ' '
+  - PragmaSrcLoc:    '/home/siyenga7/FPGA/attention_int8.cpp:181:9'
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                       Column: 9 }
+  - VarName:         V_tile_5
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                   Column: 9 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            V_tile_5
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=V_tile_6'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  attention_int8_kernel
+  - String:          ' '
+  - varLoc:          '/home/siyenga7/FPGA/attention_int8.cpp:122:21'
+  - String:          ' '
+  - PragmaSrcLoc:    '/home/siyenga7/FPGA/attention_int8.cpp:181:9'
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                       Column: 9 }
+  - VarName:         V_tile_6
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                   Column: 9 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            V_tile_6
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=V_tile_7'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  attention_int8_kernel
+  - String:          ' '
+  - varLoc:          '/home/siyenga7/FPGA/attention_int8.cpp:122:21'
+  - String:          ' '
+  - PragmaSrcLoc:    '/home/siyenga7/FPGA/attention_int8.cpp:181:9'
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                       Column: 9 }
+  - VarName:         V_tile_7
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 181, 
+                   Column: 9 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            V_tile_7
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          V_tile_0
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          V_tile_1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          V_tile_2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          V_tile_3
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          V_tile_4
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          V_tile_5
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          V_tile_6
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 122, 
+                   Column: 21 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          V_tile_7
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 81, 
+                   Column: 19 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4194304'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_81_1
+  - String:          ' '
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:81:19'
+  - String:          ' '
+  - Function:        attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 81, 
+                   Column: 19 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4194304'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_81_1
+  - String:          '''('
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:81:19'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 81, 
+                   Column: 19 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '4194304'
+  - String:          ' and bit width '
+  - Width:           '16'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_81_1
+  - String:          ' '
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:81:19'
+  - String:          ' '
+  - Function:        attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 81, 
+                   Column: 19 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '4194304'
+  - String:          ' and bit width '
+  - Width:           '16'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_81_1
+  - String:          '''('
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:81:19'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem3
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 130, 
+                   Column: 20 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '8192'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_130_8
+  - String:          ' '
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:130:20'
+  - String:          ' '
+  - Function:        attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 130, 
+                   Column: 20 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '8192'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_130_8
+  - String:          '''('
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:130:20'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 130, 
+                   Column: 20 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '8192'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_130_8
+  - String:          ' '
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:130:20'
+  - String:          ' '
+  - Function:        attention_int8_kernel
+    DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 64, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/siyenga7/FPGA/attention_int8.cpp, Line: 130, 
+                   Column: 20 }
+Function:        attention_int8_kernel
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '8192'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_130_8
+  - String:          '''('
+  - LoopLoc:         '/home/siyenga7/FPGA/attention_int8.cpp:130:20'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

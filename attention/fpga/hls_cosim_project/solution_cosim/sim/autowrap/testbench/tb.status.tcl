@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/siyenga7/FPGA/hls_cosim_project/solution_cosim/./sim/autowrap/testbench/attention_int8.cpp_pre.cpp.tb.cpp

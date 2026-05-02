@@ -1,0 +1,12 @@
+{
+  "num_q_heads": 1,
+  "num_kv_heads": 1,
+  "q_per_kv": 1,
+  "seq_len": 128,
+  "head_dim": 64,
+  "q_scale": 1.1105354906276423e-05,
+  "v_scale": 0.00840769133229894,
+  "q_scale_input": 0.009611296841478724,
+  "k_scale_input": 0.009243584993317372,
+  "seed": 1234
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "directory": "/home/siyenga7/FPGA/hls_component",
+    "arguments": [
+      "/packages/apps/fpga/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/g++",
+      "-isystem/packages/apps/fpga/Vitis_HLS/2023.2/include",
+      "-isystem/packages/apps/fpga/Vitis_HLS/2023.2/include/etc",
+      "-isystem/packages/apps/fpga/Vitis_HLS/2023.2/include/ap_sysc",
+      "-isystem/packages/apps/fpga/Vitis_HLS/2023.2/lnx64/tools/auto_cc/include",
+      "-isystem/packages/apps/fpga/Vitis_HLS/2023.2/lnx64/tools/systemc/include",
+      "--compile",
+      "/home/siyenga7/FPGA/attention_top.h"
+    ],
+    "file": "/home/siyenga7/FPGA/attention_top.h"
+  },
+  {
+    "directory": "/home/siyenga7/FPGA/hls_component",
+    "arguments": [
+      "/packages/apps/fpga/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/g++",
+      "-isystem/packages/apps/fpga/Vitis_HLS/2023.2/include",
+      "-isystem/packages/apps/fpga/Vitis_HLS/2023.2/include/etc",
+      "-isystem/packages/apps/fpga/Vitis_HLS/2023.2/include/ap_sysc",
+      "-isystem/packages/apps/fpga/Vitis_HLS/2023.2/lnx64/tools/auto_cc/include",
+      "-isystem/packages/apps/fpga/Vitis_HLS/2023.2/lnx64/tools/systemc/include",
+      "--compile",
+      "/home/siyenga7/FPGA/attention_int8.cpp"
+    ],
+    "file": "/home/siyenga7/FPGA/attention_int8.cpp"
+  }
+]

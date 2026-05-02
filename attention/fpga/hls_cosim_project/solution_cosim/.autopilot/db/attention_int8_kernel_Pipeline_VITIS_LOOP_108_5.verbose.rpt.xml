@@ -1,0 +1,283 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'attention_int8_kernel_Pipeline_VITIS_LOOP_108_5'" level="0">
+<item name = "Date">Sat Apr 25 21:22:57 2026
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">hls_cosim_project</item>
+<item name = "Solution">solution_cosim (Vivado IP Flow Target)</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200t-sbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 4.697 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">34, 34, 0.340 us, 0.340 us, 34, 34, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_108_5">32, 32, 4, 4, 1, 8, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 64, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 384, -</column>
+<column name="Register">-, -, 153, -, -</column>
+<specialColumn name="Available">730, 740, 269200, 134600, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln108_fu_858_p2">+, 0, 0, 13, 4, 1</column>
+<column name="icmp_ln108_fu_852_p2">icmp, 0, 0, 9, 4, 5</column>
+<column name="or_ln114_1_fu_902_p2">or, 0, 0, 6, 6, 2</column>
+<column name="or_ln114_2_fu_920_p2">or, 0, 0, 6, 6, 2</column>
+<column name="or_ln114_3_fu_938_p2">or, 0, 0, 6, 6, 3</column>
+<column name="or_ln114_4_fu_956_p2">or, 0, 0, 6, 6, 3</column>
+<column name="or_ln114_5_fu_974_p2">or, 0, 0, 6, 6, 3</column>
+<column name="or_ln114_6_fu_992_p2">or, 0, 0, 6, 6, 3</column>
+<column name="or_ln114_fu_884_p2">or, 0, 0, 6, 6, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="O_tile_1_address0">21, 5, 6, 30</column>
+<column name="O_tile_1_address1">21, 5, 6, 30</column>
+<column name="O_tile_2_address0">21, 5, 6, 30</column>
+<column name="O_tile_2_address1">21, 5, 6, 30</column>
+<column name="O_tile_3_address0">21, 5, 6, 30</column>
+<column name="O_tile_3_address1">21, 5, 6, 30</column>
+<column name="O_tile_4_address0">21, 5, 6, 30</column>
+<column name="O_tile_4_address1">21, 5, 6, 30</column>
+<column name="O_tile_5_address0">21, 5, 6, 30</column>
+<column name="O_tile_5_address1">21, 5, 6, 30</column>
+<column name="O_tile_6_address0">21, 5, 6, 30</column>
+<column name="O_tile_6_address1">21, 5, 6, 30</column>
+<column name="O_tile_7_address0">21, 5, 6, 30</column>
+<column name="O_tile_7_address1">21, 5, 6, 30</column>
+<column name="O_tile_address0">21, 5, 6, 30</column>
+<column name="O_tile_address1">21, 5, 6, 30</column>
+<column name="ap_NS_fsm">21, 5, 1, 5</column>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_i">9, 2, 4, 8</column>
+<column name="i_1_fu_108">9, 2, 4, 8</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="O_tile_1_addr_2_reg_1298">3, 0, 6, 3</column>
+<column name="O_tile_1_addr_3_reg_1303">3, 0, 6, 3</column>
+<column name="O_tile_1_addr_4_reg_1308">3, 0, 6, 3</column>
+<column name="O_tile_1_addr_5_reg_1313">3, 0, 6, 3</column>
+<column name="O_tile_1_addr_6_reg_1318">3, 0, 6, 3</column>
+<column name="O_tile_1_addr_7_reg_1323">3, 0, 6, 3</column>
+<column name="O_tile_2_addr_2_reg_1328">3, 0, 6, 3</column>
+<column name="O_tile_2_addr_3_reg_1333">3, 0, 6, 3</column>
+<column name="O_tile_2_addr_4_reg_1338">3, 0, 6, 3</column>
+<column name="O_tile_2_addr_5_reg_1343">3, 0, 6, 3</column>
+<column name="O_tile_2_addr_6_reg_1348">3, 0, 6, 3</column>
+<column name="O_tile_2_addr_7_reg_1353">3, 0, 6, 3</column>
+<column name="O_tile_3_addr_2_reg_1358">3, 0, 6, 3</column>
+<column name="O_tile_3_addr_3_reg_1363">3, 0, 6, 3</column>
+<column name="O_tile_3_addr_4_reg_1368">3, 0, 6, 3</column>
+<column name="O_tile_3_addr_5_reg_1373">3, 0, 6, 3</column>
+<column name="O_tile_3_addr_6_reg_1378">3, 0, 6, 3</column>
+<column name="O_tile_3_addr_7_reg_1383">3, 0, 6, 3</column>
+<column name="O_tile_4_addr_2_reg_1388">3, 0, 6, 3</column>
+<column name="O_tile_4_addr_3_reg_1393">3, 0, 6, 3</column>
+<column name="O_tile_4_addr_4_reg_1398">3, 0, 6, 3</column>
+<column name="O_tile_4_addr_5_reg_1403">3, 0, 6, 3</column>
+<column name="O_tile_4_addr_6_reg_1408">3, 0, 6, 3</column>
+<column name="O_tile_4_addr_7_reg_1413">3, 0, 6, 3</column>
+<column name="O_tile_5_addr_2_reg_1418">3, 0, 6, 3</column>
+<column name="O_tile_5_addr_3_reg_1423">3, 0, 6, 3</column>
+<column name="O_tile_5_addr_4_reg_1428">3, 0, 6, 3</column>
+<column name="O_tile_5_addr_5_reg_1433">3, 0, 6, 3</column>
+<column name="O_tile_5_addr_6_reg_1438">3, 0, 6, 3</column>
+<column name="O_tile_5_addr_7_reg_1443">3, 0, 6, 3</column>
+<column name="O_tile_6_addr_2_reg_1448">3, 0, 6, 3</column>
+<column name="O_tile_6_addr_3_reg_1453">3, 0, 6, 3</column>
+<column name="O_tile_6_addr_4_reg_1458">3, 0, 6, 3</column>
+<column name="O_tile_6_addr_5_reg_1463">3, 0, 6, 3</column>
+<column name="O_tile_6_addr_6_reg_1468">3, 0, 6, 3</column>
+<column name="O_tile_6_addr_7_reg_1473">3, 0, 6, 3</column>
+<column name="O_tile_7_addr_2_reg_1478">3, 0, 6, 3</column>
+<column name="O_tile_7_addr_3_reg_1483">3, 0, 6, 3</column>
+<column name="O_tile_7_addr_4_reg_1488">3, 0, 6, 3</column>
+<column name="O_tile_7_addr_5_reg_1493">3, 0, 6, 3</column>
+<column name="O_tile_7_addr_6_reg_1498">3, 0, 6, 3</column>
+<column name="O_tile_7_addr_7_reg_1503">3, 0, 6, 3</column>
+<column name="O_tile_addr_2_reg_1268">3, 0, 6, 3</column>
+<column name="O_tile_addr_3_reg_1273">3, 0, 6, 3</column>
+<column name="O_tile_addr_4_reg_1278">3, 0, 6, 3</column>
+<column name="O_tile_addr_5_reg_1283">3, 0, 6, 3</column>
+<column name="O_tile_addr_6_reg_1288">3, 0, 6, 3</column>
+<column name="O_tile_addr_7_reg_1293">3, 0, 6, 3</column>
+<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="i_1_fu_108">4, 0, 4, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, attention_int8_kernel_Pipeline_VITIS_LOOP_108_5, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, attention_int8_kernel_Pipeline_VITIS_LOOP_108_5, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, attention_int8_kernel_Pipeline_VITIS_LOOP_108_5, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, attention_int8_kernel_Pipeline_VITIS_LOOP_108_5, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, attention_int8_kernel_Pipeline_VITIS_LOOP_108_5, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, attention_int8_kernel_Pipeline_VITIS_LOOP_108_5, return value</column>
+<column name="O_tile_address0">out, 6, ap_memory, O_tile, array</column>
+<column name="O_tile_ce0">out, 1, ap_memory, O_tile, array</column>
+<column name="O_tile_we0">out, 1, ap_memory, O_tile, array</column>
+<column name="O_tile_d0">out, 32, ap_memory, O_tile, array</column>
+<column name="O_tile_address1">out, 6, ap_memory, O_tile, array</column>
+<column name="O_tile_ce1">out, 1, ap_memory, O_tile, array</column>
+<column name="O_tile_we1">out, 1, ap_memory, O_tile, array</column>
+<column name="O_tile_d1">out, 32, ap_memory, O_tile, array</column>
+<column name="O_tile_1_address0">out, 6, ap_memory, O_tile_1, array</column>
+<column name="O_tile_1_ce0">out, 1, ap_memory, O_tile_1, array</column>
+<column name="O_tile_1_we0">out, 1, ap_memory, O_tile_1, array</column>
+<column name="O_tile_1_d0">out, 32, ap_memory, O_tile_1, array</column>
+<column name="O_tile_1_address1">out, 6, ap_memory, O_tile_1, array</column>
+<column name="O_tile_1_ce1">out, 1, ap_memory, O_tile_1, array</column>
+<column name="O_tile_1_we1">out, 1, ap_memory, O_tile_1, array</column>
+<column name="O_tile_1_d1">out, 32, ap_memory, O_tile_1, array</column>
+<column name="O_tile_2_address0">out, 6, ap_memory, O_tile_2, array</column>
+<column name="O_tile_2_ce0">out, 1, ap_memory, O_tile_2, array</column>
+<column name="O_tile_2_we0">out, 1, ap_memory, O_tile_2, array</column>
+<column name="O_tile_2_d0">out, 32, ap_memory, O_tile_2, array</column>
+<column name="O_tile_2_address1">out, 6, ap_memory, O_tile_2, array</column>
+<column name="O_tile_2_ce1">out, 1, ap_memory, O_tile_2, array</column>
+<column name="O_tile_2_we1">out, 1, ap_memory, O_tile_2, array</column>
+<column name="O_tile_2_d1">out, 32, ap_memory, O_tile_2, array</column>
+<column name="O_tile_3_address0">out, 6, ap_memory, O_tile_3, array</column>
+<column name="O_tile_3_ce0">out, 1, ap_memory, O_tile_3, array</column>
+<column name="O_tile_3_we0">out, 1, ap_memory, O_tile_3, array</column>
+<column name="O_tile_3_d0">out, 32, ap_memory, O_tile_3, array</column>
+<column name="O_tile_3_address1">out, 6, ap_memory, O_tile_3, array</column>
+<column name="O_tile_3_ce1">out, 1, ap_memory, O_tile_3, array</column>
+<column name="O_tile_3_we1">out, 1, ap_memory, O_tile_3, array</column>
+<column name="O_tile_3_d1">out, 32, ap_memory, O_tile_3, array</column>
+<column name="O_tile_4_address0">out, 6, ap_memory, O_tile_4, array</column>
+<column name="O_tile_4_ce0">out, 1, ap_memory, O_tile_4, array</column>
+<column name="O_tile_4_we0">out, 1, ap_memory, O_tile_4, array</column>
+<column name="O_tile_4_d0">out, 32, ap_memory, O_tile_4, array</column>
+<column name="O_tile_4_address1">out, 6, ap_memory, O_tile_4, array</column>
+<column name="O_tile_4_ce1">out, 1, ap_memory, O_tile_4, array</column>
+<column name="O_tile_4_we1">out, 1, ap_memory, O_tile_4, array</column>
+<column name="O_tile_4_d1">out, 32, ap_memory, O_tile_4, array</column>
+<column name="O_tile_5_address0">out, 6, ap_memory, O_tile_5, array</column>
+<column name="O_tile_5_ce0">out, 1, ap_memory, O_tile_5, array</column>
+<column name="O_tile_5_we0">out, 1, ap_memory, O_tile_5, array</column>
+<column name="O_tile_5_d0">out, 32, ap_memory, O_tile_5, array</column>
+<column name="O_tile_5_address1">out, 6, ap_memory, O_tile_5, array</column>
+<column name="O_tile_5_ce1">out, 1, ap_memory, O_tile_5, array</column>
+<column name="O_tile_5_we1">out, 1, ap_memory, O_tile_5, array</column>
+<column name="O_tile_5_d1">out, 32, ap_memory, O_tile_5, array</column>
+<column name="O_tile_6_address0">out, 6, ap_memory, O_tile_6, array</column>
+<column name="O_tile_6_ce0">out, 1, ap_memory, O_tile_6, array</column>
+<column name="O_tile_6_we0">out, 1, ap_memory, O_tile_6, array</column>
+<column name="O_tile_6_d0">out, 32, ap_memory, O_tile_6, array</column>
+<column name="O_tile_6_address1">out, 6, ap_memory, O_tile_6, array</column>
+<column name="O_tile_6_ce1">out, 1, ap_memory, O_tile_6, array</column>
+<column name="O_tile_6_we1">out, 1, ap_memory, O_tile_6, array</column>
+<column name="O_tile_6_d1">out, 32, ap_memory, O_tile_6, array</column>
+<column name="O_tile_7_address0">out, 6, ap_memory, O_tile_7, array</column>
+<column name="O_tile_7_ce0">out, 1, ap_memory, O_tile_7, array</column>
+<column name="O_tile_7_we0">out, 1, ap_memory, O_tile_7, array</column>
+<column name="O_tile_7_d0">out, 32, ap_memory, O_tile_7, array</column>
+<column name="O_tile_7_address1">out, 6, ap_memory, O_tile_7, array</column>
+<column name="O_tile_7_ce1">out, 1, ap_memory, O_tile_7, array</column>
+<column name="O_tile_7_we1">out, 1, ap_memory, O_tile_7, array</column>
+<column name="O_tile_7_d1">out, 32, ap_memory, O_tile_7, array</column>
+<column name="l_state_7_out">out, 32, ap_vld, l_state_7_out, pointer</column>
+<column name="l_state_7_out_ap_vld">out, 1, ap_vld, l_state_7_out, pointer</column>
+<column name="l_state_6_out">out, 32, ap_vld, l_state_6_out, pointer</column>
+<column name="l_state_6_out_ap_vld">out, 1, ap_vld, l_state_6_out, pointer</column>
+<column name="l_state_5_out">out, 32, ap_vld, l_state_5_out, pointer</column>
+<column name="l_state_5_out_ap_vld">out, 1, ap_vld, l_state_5_out, pointer</column>
+<column name="l_state_4_out">out, 32, ap_vld, l_state_4_out, pointer</column>
+<column name="l_state_4_out_ap_vld">out, 1, ap_vld, l_state_4_out, pointer</column>
+<column name="l_state_3_out">out, 32, ap_vld, l_state_3_out, pointer</column>
+<column name="l_state_3_out_ap_vld">out, 1, ap_vld, l_state_3_out, pointer</column>
+<column name="l_state_2_out">out, 32, ap_vld, l_state_2_out, pointer</column>
+<column name="l_state_2_out_ap_vld">out, 1, ap_vld, l_state_2_out, pointer</column>
+<column name="l_state_1_out">out, 32, ap_vld, l_state_1_out, pointer</column>
+<column name="l_state_1_out_ap_vld">out, 1, ap_vld, l_state_1_out, pointer</column>
+<column name="l_state_out">out, 32, ap_vld, l_state_out, pointer</column>
+<column name="l_state_out_ap_vld">out, 1, ap_vld, l_state_out, pointer</column>
+<column name="m_state_7_out">out, 32, ap_vld, m_state_7_out, pointer</column>
+<column name="m_state_7_out_ap_vld">out, 1, ap_vld, m_state_7_out, pointer</column>
+<column name="m_state_6_out">out, 32, ap_vld, m_state_6_out, pointer</column>
+<column name="m_state_6_out_ap_vld">out, 1, ap_vld, m_state_6_out, pointer</column>
+<column name="m_state_5_out">out, 32, ap_vld, m_state_5_out, pointer</column>
+<column name="m_state_5_out_ap_vld">out, 1, ap_vld, m_state_5_out, pointer</column>
+<column name="m_state_4_out">out, 32, ap_vld, m_state_4_out, pointer</column>
+<column name="m_state_4_out_ap_vld">out, 1, ap_vld, m_state_4_out, pointer</column>
+<column name="m_state_3_out">out, 32, ap_vld, m_state_3_out, pointer</column>
+<column name="m_state_3_out_ap_vld">out, 1, ap_vld, m_state_3_out, pointer</column>
+<column name="m_state_2_out">out, 32, ap_vld, m_state_2_out, pointer</column>
+<column name="m_state_2_out_ap_vld">out, 1, ap_vld, m_state_2_out, pointer</column>
+<column name="m_state_1_out">out, 32, ap_vld, m_state_1_out, pointer</column>
+<column name="m_state_1_out_ap_vld">out, 1, ap_vld, m_state_1_out, pointer</column>
+<column name="m_state_out">out, 32, ap_vld, m_state_out, pointer</column>
+<column name="m_state_out_ap_vld">out, 1, ap_vld, m_state_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>
