@@ -1,0 +1,2 @@
+workload,dtype,batch_size,throughput,latency_p50,latency_p99,energy_total,avg_power,achieved_gflops,utilization_pct,arith_intensity,phase_staging,phase_compute,phase_output,tta_sec
+har_svm,float32,1,1980.8169301046798,0.5048422117167352,0.5048422117167352,114.62054214156765,6.853693676209561,3.2503541936796507,0.6046045747171969,0.4736743655440693,0,16.723907947540283,0,16.723907947540283

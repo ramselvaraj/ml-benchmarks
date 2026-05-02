@@ -1,0 +1,2 @@
+device_type,workload,dtype,batch_size,throughput,latency_p50,latency_p99,energy_total,avg_power,achieved_gflops,utilization_pct,arith_intensity,phase_staging,phase_compute,phase_output,tta_sec
+Zynq-7020 CLG484,har_svm_multiclass,fixed_16,33127,3986842.105,0.000251,0.000251,0.004686276,0.564,0.518289,"LUT=0.13%; FF=0.04%; DSP=0.06%; IO=86.86%",5,0,8.309083,0,0.008309

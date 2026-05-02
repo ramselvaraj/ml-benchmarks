@@ -1,0 +1,2 @@
+device_type,workload,dtype,batch_size,throughput,latency_p50,latency_p99,energy_total,avg_power,achieved_gflops,utilization_pct,arith_intensity,phase_staging,phase_compute,phase_output,tta_sec
+Kintex UltraScale KU035/KU040,cnn_multimac,INT8,10,1768.85,0.5653,0.5653,0.001899542,0.336,4.942584,"0.13% LUT, 0.18% FF, 70.00% IO",NA,NA,NA,NA,0.005653399

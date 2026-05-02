@@ -1,0 +1,2 @@
+workload,dtype,batch_size,throughput,latency_p50,latency_p99,energy_total,avg_power,achieved_gflops,utilization_pct,arith_intensity,phase_staging,phase_compute,phase_output,tta_sec
+har_svm_multiclass,fixed_16,33127,1315789.473684,0.000760,0.000760,SEE_VCD,SEE_VCD,0.171053,0.0,5.000000,0.0,25.176520,0.0,N/A
